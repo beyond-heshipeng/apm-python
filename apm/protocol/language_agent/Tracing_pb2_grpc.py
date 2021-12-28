@@ -18,12 +18,12 @@ class TraceSegmentReportServiceStub(object):
             channel: A grpc.Channel.
         """
         self.collect = channel.stream_unary(
-                '/apm.v3.TraceSegmentReportService/collect',
+                '/skywalking.v3.TraceSegmentReportService/collect',
                 request_serializer=language__agent_dot_Tracing__pb2.SegmentObject.SerializeToString,
                 response_deserializer=common_dot_Common__pb2.Commands.FromString,
                 )
         self.collectInSync = channel.unary_unary(
-                '/apm.v3.TraceSegmentReportService/collectInSync',
+                '/skywalking.v3.TraceSegmentReportService/collectInSync',
                 request_serializer=language__agent_dot_Tracing__pb2.SegmentCollection.SerializeToString,
                 response_deserializer=common_dot_Common__pb2.Commands.FromString,
                 )
@@ -68,7 +68,7 @@ def add_TraceSegmentReportServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'apm.v3.TraceSegmentReportService', rpc_method_handlers)
+            'skywalking.v3.TraceSegmentReportService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -89,7 +89,7 @@ class TraceSegmentReportService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.stream_unary(request_iterator, target, '/apm.v3.TraceSegmentReportService/collect',
+        return grpc.experimental.stream_unary(request_iterator, target, '/skywalking.v3.TraceSegmentReportService/collect',
             language__agent_dot_Tracing__pb2.SegmentObject.SerializeToString,
             common_dot_Common__pb2.Commands.FromString,
             options, channel_credentials,
@@ -106,7 +106,7 @@ class TraceSegmentReportService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/apm.v3.TraceSegmentReportService/collectInSync',
+        return grpc.experimental.unary_unary(request, target, '/skywalking.v3.TraceSegmentReportService/collectInSync',
             language__agent_dot_Tracing__pb2.SegmentCollection.SerializeToString,
             common_dot_Common__pb2.Commands.FromString,
             options, channel_credentials,

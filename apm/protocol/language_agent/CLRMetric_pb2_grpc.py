@@ -16,7 +16,7 @@ class CLRMetricReportServiceStub(object):
             channel: A grpc.Channel.
         """
         self.collect = channel.unary_unary(
-                '/apm.v3.CLRMetricReportService/collect',
+                '/skywalking.v3.CLRMetricReportService/collect',
                 request_serializer=language__agent_dot_CLRMetric__pb2.CLRMetricCollection.SerializeToString,
                 response_deserializer=common_dot_Common__pb2.Commands.FromString,
                 )
@@ -41,7 +41,7 @@ def add_CLRMetricReportServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'apm.v3.CLRMetricReportService', rpc_method_handlers)
+            'skywalking.v3.CLRMetricReportService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -60,7 +60,7 @@ class CLRMetricReportService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/apm.v3.CLRMetricReportService/collect',
+        return grpc.experimental.unary_unary(request, target, '/skywalking.v3.CLRMetricReportService/collect',
             language__agent_dot_CLRMetric__pb2.CLRMetricCollection.SerializeToString,
             common_dot_Common__pb2.Commands.FromString,
             options, channel_credentials,

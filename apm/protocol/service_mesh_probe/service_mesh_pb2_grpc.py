@@ -16,7 +16,7 @@ class ServiceMeshMetricServiceStub(object):
             channel: A grpc.Channel.
         """
         self.collect = channel.stream_unary(
-                '/apm.v3.ServiceMeshMetricService/collect',
+                '/skywalking.v3.ServiceMeshMetricService/collect',
                 request_serializer=service__mesh__probe_dot_service__mesh__pb2.ServiceMeshMetric.SerializeToString,
                 response_deserializer=service__mesh__probe_dot_service__mesh__pb2.MeshProbeDownstream.FromString,
                 )
@@ -42,7 +42,7 @@ def add_ServiceMeshMetricServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'apm.v3.ServiceMeshMetricService', rpc_method_handlers)
+            'skywalking.v3.ServiceMeshMetricService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -62,7 +62,7 @@ class ServiceMeshMetricService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.stream_unary(request_iterator, target, '/apm.v3.ServiceMeshMetricService/collect',
+        return grpc.experimental.stream_unary(request_iterator, target, '/skywalking.v3.ServiceMeshMetricService/collect',
             service__mesh__probe_dot_service__mesh__pb2.ServiceMeshMetric.SerializeToString,
             service__mesh__probe_dot_service__mesh__pb2.MeshProbeDownstream.FromString,
             options, channel_credentials,

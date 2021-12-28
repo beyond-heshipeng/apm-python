@@ -19,9 +19,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='management/ManagementCompat.proto',
   package='',
   syntax='proto3',
-  serialized_options=b'\n6org.apache.apm.apm.network.management.v3.compatP\001Z6skywalking.apache.org/repo/goapi/collect/management/v3\270\001\001\252\002\035SkyWalking.NetworkProtocol.V3',
+  serialized_options=b'\n6org.apache.skywalking.apm.network.management.v3.compatP\001Z6skywalking.apache.org/repo/goapi/collect/management/v3\270\001\001\252\002\035SkyWalking.NetworkProtocol.V3',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n!management/ManagementCompat.proto\x1a\x13\x63ommon/Common.proto\x1a\x1bmanagement/Management.proto2\xb5\x01\n\x11ManagementService\x12X\n\x18reportInstanceProperties\x12!.apm.v3.InstanceProperties\x1a\x17.apm.v3.Commands\"\x00\x12\x46\n\tkeepAlive\x12\x1e.apm.v3.InstancePingPkg\x1a\x17.apm.v3.Commands\"\x00\x42\x95\x01\n6org.apache.apm.apm.network.management.v3.compatP\x01Z6skywalking.apache.org/repo/goapi/collect/management/v3\xb8\x01\x01\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
+  serialized_pb=b'\n!management/ManagementCompat.proto\x1a\x13\x63ommon/Common.proto\x1a\x1bmanagement/Management.proto2\xb5\x01\n\x11ManagementService\x12X\n\x18reportInstanceProperties\x12!.skywalking.v3.InstanceProperties\x1a\x17.skywalking.v3.Commands\"\x00\x12\x46\n\tkeepAlive\x12\x1e.skywalking.v3.InstancePingPkg\x1a\x17.skywalking.v3.Commands\"\x00\x42\x95\x01\n6org.apache.skywalking.apm.network.management.v3.compatP\x01Z6skywalking.apache.org/repo/goapi/collect/management/v3\xb8\x01\x01\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
   ,
   dependencies=[common_dot_Common__pb2.DESCRIPTOR,management_dot_Management__pb2.DESCRIPTOR,])
 

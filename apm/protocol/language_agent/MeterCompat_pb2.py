@@ -19,9 +19,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='language-agent/MeterCompat.proto',
   package='',
   syntax='proto3',
-  serialized_options=b'\n:org.apache.apm.apm.network.language.agent.v3.compatP\001Z:apm.apache.org/repo/goapi/collect/language/agent/v3\270\001\001',
+  serialized_options=b'\n:org.apache.skywalking.apm.network.language.agent.v3.compatP\001Z:skywalking.apache.org/repo/goapi/collect/language/agent/v3\270\001\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n language-agent/MeterCompat.proto\x1a\x13\x63ommon/Common.proto\x1a\x1alanguage-agent/Meter.proto2V\n\x12MeterReportService\x12@\n\x07\x63ollect\x12\x18.apm.v3.MeterData\x1a\x17.apm.v3.Commands\"\x00(\x01\x42}\n:org.apache.apm.apm.network.language.agent.v3.compatP\x01Z:apm.apache.org/repo/goapi/collect/language/agent/v3\xb8\x01\x01\x62\x06proto3'
+  serialized_pb=b'\n language-agent/MeterCompat.proto\x1a\x13\x63ommon/Common.proto\x1a\x1alanguage-agent/Meter.proto2V\n\x12MeterReportService\x12@\n\x07\x63ollect\x12\x18.skywalking.v3.MeterData\x1a\x17.skywalking.v3.Commands\"\x00(\x01\x42}\n:org.apache.skywalking.apm.network.language.agent.v3.compatP\x01Z:skywalking.apache.org/repo/goapi/collect/language/agent/v3\xb8\x01\x01\x62\x06proto3'
   ,
   dependencies=[common_dot_Common__pb2.DESCRIPTOR,language__agent_dot_Meter__pb2.DESCRIPTOR,])
 

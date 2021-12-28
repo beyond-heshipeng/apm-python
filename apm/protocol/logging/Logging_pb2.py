@@ -16,11 +16,11 @@ from ..common import Common_pb2 as common_dot_Common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='logging/Logging.proto',
-  package='apm.v3',
+  package='skywalking.v3',
   syntax='proto3',
-  serialized_options=b'\n,org.apache.apm.apm.network.logging.v3P\001Z3skywalking.apache.org/repo/goapi/collect/logging/v3\252\002\035SkyWalking.NetworkProtocol.V3',
+  serialized_options=b'\n,org.apache.skywalking.apm.network.logging.v3P\001Z3skywalking.apache.org/repo/goapi/collect/logging/v3\252\002\035SkyWalking.NetworkProtocol.V3',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x15logging/Logging.proto\x12\rapm.v3\x1a\x13\x63ommon/Common.proto\"\xdb\x01\n\x07LogData\x12\x11\n\ttimestamp\x18\x01 \x01(\x03\x12\x0f\n\x07service\x18\x02 \x01(\t\x12\x17\n\x0fserviceInstance\x18\x03 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x04 \x01(\t\x12(\n\x04\x62ody\x18\x05 \x01(\x0b\x32\x1a.apm.v3.LogDataBody\x12\x31\n\x0ctraceContext\x18\x06 \x01(\x0b\x32\x1b.apm.v3.TraceContext\x12$\n\x04tags\x18\x07 \x01(\x0b\x32\x16.apm.v3.LogTags\"\x9e\x01\n\x0bLogDataBody\x12\x0c\n\x04type\x18\x01 \x01(\t\x12&\n\x04text\x18\x02 \x01(\x0b\x32\x16.apm.v3.TextLogH\x00\x12&\n\x04json\x18\x03 \x01(\x0b\x32\x16.apm.v3.JSONLogH\x00\x12&\n\x04yaml\x18\x04 \x01(\x0b\x32\x16.apm.v3.YAMLLogH\x00\x42\t\n\x07\x63ontent\"\x17\n\x07TextLog\x12\x0c\n\x04text\x18\x01 \x01(\t\"\x17\n\x07JSONLog\x12\x0c\n\x04json\x18\x01 \x01(\t\"\x17\n\x07YAMLLog\x12\x0c\n\x04yaml\x18\x01 \x01(\t\"G\n\x0cTraceContext\x12\x0f\n\x07traceId\x18\x01 \x01(\t\x12\x16\n\x0etraceSegmentId\x18\x02 \x01(\t\x12\x0e\n\x06spanId\x18\x03 \x01(\x05\":\n\x07LogTags\x12/\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32!.apm.v3.KeyStringValuePair2R\n\x10LogReportService\x12>\n\x07\x63ollect\x12\x16.apm.v3.LogData\x1a\x17.apm.v3.Commands\"\x00(\x01\x42\x85\x01\n,org.apache.apm.apm.network.logging.v3P\x01Z3skywalking.apache.org/repo/goapi/collect/logging/v3\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
+  serialized_pb=b'\n\x15logging/Logging.proto\x12\rskywalking.v3\x1a\x13\x63ommon/Common.proto\"\xdb\x01\n\x07LogData\x12\x11\n\ttimestamp\x18\x01 \x01(\x03\x12\x0f\n\x07service\x18\x02 \x01(\t\x12\x17\n\x0fserviceInstance\x18\x03 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x04 \x01(\t\x12(\n\x04\x62ody\x18\x05 \x01(\x0b\x32\x1a.skywalking.v3.LogDataBody\x12\x31\n\x0ctraceContext\x18\x06 \x01(\x0b\x32\x1b.skywalking.v3.TraceContext\x12$\n\x04tags\x18\x07 \x01(\x0b\x32\x16.skywalking.v3.LogTags\"\x9e\x01\n\x0bLogDataBody\x12\x0c\n\x04type\x18\x01 \x01(\t\x12&\n\x04text\x18\x02 \x01(\x0b\x32\x16.skywalking.v3.TextLogH\x00\x12&\n\x04json\x18\x03 \x01(\x0b\x32\x16.skywalking.v3.JSONLogH\x00\x12&\n\x04yaml\x18\x04 \x01(\x0b\x32\x16.skywalking.v3.YAMLLogH\x00\x42\t\n\x07\x63ontent\"\x17\n\x07TextLog\x12\x0c\n\x04text\x18\x01 \x01(\t\"\x17\n\x07JSONLog\x12\x0c\n\x04json\x18\x01 \x01(\t\"\x17\n\x07YAMLLog\x12\x0c\n\x04yaml\x18\x01 \x01(\t\"G\n\x0cTraceContext\x12\x0f\n\x07traceId\x18\x01 \x01(\t\x12\x16\n\x0etraceSegmentId\x18\x02 \x01(\t\x12\x0e\n\x06spanId\x18\x03 \x01(\x05\":\n\x07LogTags\x12/\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32!.skywalking.v3.KeyStringValuePair2R\n\x10LogReportService\x12>\n\x07\x63ollect\x12\x16.skywalking.v3.LogData\x1a\x17.skywalking.v3.Commands\"\x00(\x01\x42\x85\x01\n,org.apache.skywalking.apm.network.logging.v3P\x01Z3skywalking.apache.org/repo/goapi/collect/logging/v3\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
   ,
   dependencies=[common_dot_Common__pb2.DESCRIPTOR,])
 
@@ -29,56 +29,56 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _LOGDATA = _descriptor.Descriptor(
   name='LogData',
-  full_name='apm.v3.LogData',
+  full_name='skywalking.v3.LogData',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='timestamp', full_name='apm.v3.LogData.timestamp', index=0,
+      name='timestamp', full_name='skywalking.v3.LogData.timestamp', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='service', full_name='apm.v3.LogData.service', index=1,
+      name='service', full_name='skywalking.v3.LogData.service', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='serviceInstance', full_name='apm.v3.LogData.serviceInstance', index=2,
+      name='serviceInstance', full_name='skywalking.v3.LogData.serviceInstance', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='endpoint', full_name='apm.v3.LogData.endpoint', index=3,
+      name='endpoint', full_name='skywalking.v3.LogData.endpoint', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='body', full_name='apm.v3.LogData.body', index=4,
+      name='body', full_name='skywalking.v3.LogData.body', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='traceContext', full_name='apm.v3.LogData.traceContext', index=5,
+      name='traceContext', full_name='skywalking.v3.LogData.traceContext', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='apm.v3.LogData.tags', index=6,
+      name='tags', full_name='skywalking.v3.LogData.tags', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -103,35 +103,35 @@ _LOGDATA = _descriptor.Descriptor(
 
 _LOGDATABODY = _descriptor.Descriptor(
   name='LogDataBody',
-  full_name='apm.v3.LogDataBody',
+  full_name='skywalking.v3.LogDataBody',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='type', full_name='apm.v3.LogDataBody.type', index=0,
+      name='type', full_name='skywalking.v3.LogDataBody.type', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='text', full_name='apm.v3.LogDataBody.text', index=1,
+      name='text', full_name='skywalking.v3.LogDataBody.text', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='json', full_name='apm.v3.LogDataBody.json', index=2,
+      name='json', full_name='skywalking.v3.LogDataBody.json', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='yaml', full_name='apm.v3.LogDataBody.yaml', index=3,
+      name='yaml', full_name='skywalking.v3.LogDataBody.yaml', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -149,7 +149,7 @@ _LOGDATABODY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
     _descriptor.OneofDescriptor(
-      name='content', full_name='apm.v3.LogDataBody.content',
+      name='content', full_name='skywalking.v3.LogDataBody.content',
       index=0, containing_type=None,
       create_key=_descriptor._internal_create_key,
     fields=[]),
@@ -161,14 +161,14 @@ _LOGDATABODY = _descriptor.Descriptor(
 
 _TEXTLOG = _descriptor.Descriptor(
   name='TextLog',
-  full_name='apm.v3.TextLog',
+  full_name='skywalking.v3.TextLog',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='text', full_name='apm.v3.TextLog.text', index=0,
+      name='text', full_name='skywalking.v3.TextLog.text', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -193,14 +193,14 @@ _TEXTLOG = _descriptor.Descriptor(
 
 _JSONLOG = _descriptor.Descriptor(
   name='JSONLog',
-  full_name='apm.v3.JSONLog',
+  full_name='skywalking.v3.JSONLog',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='json', full_name='apm.v3.JSONLog.json', index=0,
+      name='json', full_name='skywalking.v3.JSONLog.json', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -225,14 +225,14 @@ _JSONLOG = _descriptor.Descriptor(
 
 _YAMLLOG = _descriptor.Descriptor(
   name='YAMLLog',
-  full_name='apm.v3.YAMLLog',
+  full_name='skywalking.v3.YAMLLog',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='yaml', full_name='apm.v3.YAMLLog.yaml', index=0,
+      name='yaml', full_name='skywalking.v3.YAMLLog.yaml', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -257,28 +257,28 @@ _YAMLLOG = _descriptor.Descriptor(
 
 _TRACECONTEXT = _descriptor.Descriptor(
   name='TraceContext',
-  full_name='apm.v3.TraceContext',
+  full_name='skywalking.v3.TraceContext',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='traceId', full_name='apm.v3.TraceContext.traceId', index=0,
+      name='traceId', full_name='skywalking.v3.TraceContext.traceId', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='traceSegmentId', full_name='apm.v3.TraceContext.traceSegmentId', index=1,
+      name='traceSegmentId', full_name='skywalking.v3.TraceContext.traceSegmentId', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='spanId', full_name='apm.v3.TraceContext.spanId', index=2,
+      name='spanId', full_name='skywalking.v3.TraceContext.spanId', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -303,14 +303,14 @@ _TRACECONTEXT = _descriptor.Descriptor(
 
 _LOGTAGS = _descriptor.Descriptor(
   name='LogTags',
-  full_name='apm.v3.LogTags',
+  full_name='skywalking.v3.LogTags',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='data', full_name='apm.v3.LogTags.data', index=0,
+      name='data', full_name='skywalking.v3.LogTags.data', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -360,49 +360,49 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 LogData = _reflection.GeneratedProtocolMessageType('LogData', (_message.Message,), {
   'DESCRIPTOR' : _LOGDATA,
   '__module__' : 'logging.Logging_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.LogData)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.LogData)
   })
 _sym_db.RegisterMessage(LogData)
 
 LogDataBody = _reflection.GeneratedProtocolMessageType('LogDataBody', (_message.Message,), {
   'DESCRIPTOR' : _LOGDATABODY,
   '__module__' : 'logging.Logging_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.LogDataBody)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.LogDataBody)
   })
 _sym_db.RegisterMessage(LogDataBody)
 
 TextLog = _reflection.GeneratedProtocolMessageType('TextLog', (_message.Message,), {
   'DESCRIPTOR' : _TEXTLOG,
   '__module__' : 'logging.Logging_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.TextLog)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.TextLog)
   })
 _sym_db.RegisterMessage(TextLog)
 
 JSONLog = _reflection.GeneratedProtocolMessageType('JSONLog', (_message.Message,), {
   'DESCRIPTOR' : _JSONLOG,
   '__module__' : 'logging.Logging_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.JSONLog)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.JSONLog)
   })
 _sym_db.RegisterMessage(JSONLog)
 
 YAMLLog = _reflection.GeneratedProtocolMessageType('YAMLLog', (_message.Message,), {
   'DESCRIPTOR' : _YAMLLOG,
   '__module__' : 'logging.Logging_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.YAMLLog)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.YAMLLog)
   })
 _sym_db.RegisterMessage(YAMLLog)
 
 TraceContext = _reflection.GeneratedProtocolMessageType('TraceContext', (_message.Message,), {
   'DESCRIPTOR' : _TRACECONTEXT,
   '__module__' : 'logging.Logging_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.TraceContext)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.TraceContext)
   })
 _sym_db.RegisterMessage(TraceContext)
 
 LogTags = _reflection.GeneratedProtocolMessageType('LogTags', (_message.Message,), {
   'DESCRIPTOR' : _LOGTAGS,
   '__module__' : 'logging.Logging_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.LogTags)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.LogTags)
   })
 _sym_db.RegisterMessage(LogTags)
 
@@ -411,7 +411,7 @@ DESCRIPTOR._options = None
 
 _LOGREPORTSERVICE = _descriptor.ServiceDescriptor(
   name='LogReportService',
-  full_name='apm.v3.LogReportService',
+  full_name='skywalking.v3.LogReportService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
@@ -421,7 +421,7 @@ _LOGREPORTSERVICE = _descriptor.ServiceDescriptor(
   methods=[
   _descriptor.MethodDescriptor(
     name='collect',
-    full_name='apm.v3.LogReportService.collect',
+    full_name='skywalking.v3.LogReportService.collect',
     index=0,
     containing_service=None,
     input_type=_LOGDATA,

@@ -16,7 +16,7 @@ class EventServiceStub(object):
             channel: A grpc.Channel.
         """
         self.collect = channel.stream_unary(
-                '/apm.v3.EventService/collect',
+                '/skywalking.v3.EventService/collect',
                 request_serializer=event_dot_Event__pb2.Event.SerializeToString,
                 response_deserializer=common_dot_Common__pb2.Commands.FromString,
                 )
@@ -44,7 +44,7 @@ def add_EventServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'apm.v3.EventService', rpc_method_handlers)
+            'skywalking.v3.EventService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -63,7 +63,7 @@ class EventService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.stream_unary(request_iterator, target, '/apm.v3.EventService/collect',
+        return grpc.experimental.stream_unary(request_iterator, target, '/skywalking.v3.EventService/collect',
             event_dot_Event__pb2.Event.SerializeToString,
             common_dot_Common__pb2.Commands.FromString,
             options, channel_credentials,

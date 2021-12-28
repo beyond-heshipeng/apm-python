@@ -17,7 +17,7 @@ class JVMMetricReportServiceStub(object):
             channel: A grpc.Channel.
         """
         self.collect = channel.unary_unary(
-                '/apm.v3.JVMMetricReportService/collect',
+                '/skywalking.v3.JVMMetricReportService/collect',
                 request_serializer=language__agent_dot_JVMMetric__pb2.JVMMetricCollection.SerializeToString,
                 response_deserializer=common_dot_Common__pb2.Commands.FromString,
                 )
@@ -43,7 +43,7 @@ def add_JVMMetricReportServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'apm.v3.JVMMetricReportService', rpc_method_handlers)
+            'skywalking.v3.JVMMetricReportService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -63,7 +63,7 @@ class JVMMetricReportService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/apm.v3.JVMMetricReportService/collect',
+        return grpc.experimental.unary_unary(request, target, '/skywalking.v3.JVMMetricReportService/collect',
             language__agent_dot_JVMMetric__pb2.JVMMetricCollection.SerializeToString,
             common_dot_Common__pb2.Commands.FromString,
             options, channel_credentials,

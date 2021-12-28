@@ -16,16 +16,16 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='common/Common.proto',
-  package='apm.v3',
+  package='skywalking.v3',
   syntax='proto3',
-  serialized_options=b'\n+org.apache.apm.apm.network.common.v3P\001Z2skywalking.apache.org/repo/goapi/collect/common/v3\252\002\035SkyWalking.NetworkProtocol.V3',
+  serialized_options=b'\n+org.apache.skywalking.apm.network.common.v3P\001Z2skywalking.apache.org/repo/goapi/collect/common/v3\252\002\035SkyWalking.NetworkProtocol.V3',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13\x63ommon/Common.proto\x12\rapm.v3\"0\n\x12KeyStringValuePair\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\x1b\n\x03\x43PU\x12\x14\n\x0cusagePercent\x18\x02 \x01(\x01\"4\n\x08\x43ommands\x12(\n\x08\x63ommands\x18\x01 \x03(\x0b\x32\x16.apm.v3.Command\"K\n\x07\x43ommand\x12\x0f\n\x07\x63ommand\x18\x01 \x01(\t\x12/\n\x04\x61rgs\x18\x02 \x03(\x0b\x32!.apm.v3.KeyStringValuePair*0\n\x0b\x44\x65tectPoint\x12\n\n\x06\x63lient\x10\x00\x12\n\n\x06server\x10\x01\x12\t\n\x05proxy\x10\x02\x42\x83\x01\n+org.apache.apm.apm.network.common.v3P\x01Z2skywalking.apache.org/repo/goapi/collect/common/v3\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
+  serialized_pb=b'\n\x13\x63ommon/Common.proto\x12\rskywalking.v3\"0\n\x12KeyStringValuePair\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\x1b\n\x03\x43PU\x12\x14\n\x0cusagePercent\x18\x02 \x01(\x01\"4\n\x08\x43ommands\x12(\n\x08\x63ommands\x18\x01 \x03(\x0b\x32\x16.skywalking.v3.Command\"K\n\x07\x43ommand\x12\x0f\n\x07\x63ommand\x18\x01 \x01(\t\x12/\n\x04\x61rgs\x18\x02 \x03(\x0b\x32!.skywalking.v3.KeyStringValuePair*0\n\x0b\x44\x65tectPoint\x12\n\n\x06\x63lient\x10\x00\x12\n\n\x06server\x10\x01\x12\t\n\x05proxy\x10\x02\x42\x83\x01\n+org.apache.skywalking.apm.network.common.v3P\x01Z2skywalking.apache.org/repo/goapi/collect/common/v3\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
 )
 
 _DETECTPOINT = _descriptor.EnumDescriptor(
   name='DetectPoint',
-  full_name='apm.v3.DetectPoint',
+  full_name='skywalking.v3.DetectPoint',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -62,21 +62,21 @@ proxy = 2
 
 _KEYSTRINGVALUEPAIR = _descriptor.Descriptor(
   name='KeyStringValuePair',
-  full_name='apm.v3.KeyStringValuePair',
+  full_name='skywalking.v3.KeyStringValuePair',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='apm.v3.KeyStringValuePair.key', index=0,
+      name='key', full_name='skywalking.v3.KeyStringValuePair.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='value', full_name='apm.v3.KeyStringValuePair.value', index=1,
+      name='value', full_name='skywalking.v3.KeyStringValuePair.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -101,14 +101,14 @@ _KEYSTRINGVALUEPAIR = _descriptor.Descriptor(
 
 _CPU = _descriptor.Descriptor(
   name='CPU',
-  full_name='apm.v3.CPU',
+  full_name='skywalking.v3.CPU',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='usagePercent', full_name='apm.v3.CPU.usagePercent', index=0,
+      name='usagePercent', full_name='skywalking.v3.CPU.usagePercent', index=0,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -133,14 +133,14 @@ _CPU = _descriptor.Descriptor(
 
 _COMMANDS = _descriptor.Descriptor(
   name='Commands',
-  full_name='apm.v3.Commands',
+  full_name='skywalking.v3.Commands',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='commands', full_name='apm.v3.Commands.commands', index=0,
+      name='commands', full_name='skywalking.v3.Commands.commands', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -165,21 +165,21 @@ _COMMANDS = _descriptor.Descriptor(
 
 _COMMAND = _descriptor.Descriptor(
   name='Command',
-  full_name='apm.v3.Command',
+  full_name='skywalking.v3.Command',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='command', full_name='apm.v3.Command.command', index=0,
+      name='command', full_name='skywalking.v3.Command.command', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='args', full_name='apm.v3.Command.args', index=1,
+      name='args', full_name='skywalking.v3.Command.args', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -213,28 +213,28 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 KeyStringValuePair = _reflection.GeneratedProtocolMessageType('KeyStringValuePair', (_message.Message,), {
   'DESCRIPTOR' : _KEYSTRINGVALUEPAIR,
   '__module__' : 'common.Common_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.KeyStringValuePair)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.KeyStringValuePair)
   })
 _sym_db.RegisterMessage(KeyStringValuePair)
 
 CPU = _reflection.GeneratedProtocolMessageType('CPU', (_message.Message,), {
   'DESCRIPTOR' : _CPU,
   '__module__' : 'common.Common_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.CPU)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.CPU)
   })
 _sym_db.RegisterMessage(CPU)
 
 Commands = _reflection.GeneratedProtocolMessageType('Commands', (_message.Message,), {
   'DESCRIPTOR' : _COMMANDS,
   '__module__' : 'common.Common_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.Commands)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.Commands)
   })
 _sym_db.RegisterMessage(Commands)
 
 Command = _reflection.GeneratedProtocolMessageType('Command', (_message.Message,), {
   'DESCRIPTOR' : _COMMAND,
   '__module__' : 'common.Common_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.Command)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.Command)
   })
 _sym_db.RegisterMessage(Command)
 

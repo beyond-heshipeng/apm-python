@@ -16,11 +16,11 @@ from ..common import Common_pb2 as common_dot_Common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='management/Management.proto',
-  package='apm.v3',
+  package='skywalking.v3',
   syntax='proto3',
-  serialized_options=b'\n/org.apache.apm.apm.network.management.v3P\001Z6skywalking.apache.org/repo/goapi/collect/management/v3\252\002\035SkyWalking.NetworkProtocol.V3',
+  serialized_options=b'\n/org.apache.skywalking.apm.network.management.v3P\001Z6skywalking.apache.org/repo/goapi/collect/management/v3\252\002\035SkyWalking.NetworkProtocol.V3',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1bmanagement/Management.proto\x12\rapm.v3\x1a\x13\x63ommon/Common.proto\"u\n\x12InstanceProperties\x12\x0f\n\x07service\x18\x01 \x01(\t\x12\x17\n\x0fserviceInstance\x18\x02 \x01(\t\x12\x35\n\nproperties\x18\x03 \x03(\x0b\x32!.apm.v3.KeyStringValuePair\";\n\x0fInstancePingPkg\x12\x0f\n\x07service\x18\x01 \x01(\t\x12\x17\n\x0fserviceInstance\x18\x02 \x01(\t2\xb5\x01\n\x11ManagementService\x12X\n\x18reportInstanceProperties\x12!.apm.v3.InstanceProperties\x1a\x17.apm.v3.Commands\"\x00\x12\x46\n\tkeepAlive\x12\x1e.apm.v3.InstancePingPkg\x1a\x17.apm.v3.Commands\"\x00\x42\x8b\x01\n/org.apache.apm.apm.network.management.v3P\x01Z6skywalking.apache.org/repo/goapi/collect/management/v3\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
+  serialized_pb=b'\n\x1bmanagement/Management.proto\x12\rskywalking.v3\x1a\x13\x63ommon/Common.proto\"u\n\x12InstanceProperties\x12\x0f\n\x07service\x18\x01 \x01(\t\x12\x17\n\x0fserviceInstance\x18\x02 \x01(\t\x12\x35\n\nproperties\x18\x03 \x03(\x0b\x32!.skywalking.v3.KeyStringValuePair\";\n\x0fInstancePingPkg\x12\x0f\n\x07service\x18\x01 \x01(\t\x12\x17\n\x0fserviceInstance\x18\x02 \x01(\t2\xb5\x01\n\x11ManagementService\x12X\n\x18reportInstanceProperties\x12!.skywalking.v3.InstanceProperties\x1a\x17.skywalking.v3.Commands\"\x00\x12\x46\n\tkeepAlive\x12\x1e.skywalking.v3.InstancePingPkg\x1a\x17.skywalking.v3.Commands\"\x00\x42\x8b\x01\n/org.apache.skywalking.apm.network.management.v3P\x01Z6skywalking.apache.org/repo/goapi/collect/management/v3\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
   ,
   dependencies=[common_dot_Common__pb2.DESCRIPTOR,])
 
@@ -29,28 +29,28 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _INSTANCEPROPERTIES = _descriptor.Descriptor(
   name='InstanceProperties',
-  full_name='apm.v3.InstanceProperties',
+  full_name='skywalking.v3.InstanceProperties',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='service', full_name='apm.v3.InstanceProperties.service', index=0,
+      name='service', full_name='skywalking.v3.InstanceProperties.service', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='serviceInstance', full_name='apm.v3.InstanceProperties.serviceInstance', index=1,
+      name='serviceInstance', full_name='skywalking.v3.InstanceProperties.serviceInstance', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='properties', full_name='apm.v3.InstanceProperties.properties', index=2,
+      name='properties', full_name='skywalking.v3.InstanceProperties.properties', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -75,21 +75,21 @@ _INSTANCEPROPERTIES = _descriptor.Descriptor(
 
 _INSTANCEPINGPKG = _descriptor.Descriptor(
   name='InstancePingPkg',
-  full_name='apm.v3.InstancePingPkg',
+  full_name='skywalking.v3.InstancePingPkg',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='service', full_name='apm.v3.InstancePingPkg.service', index=0,
+      name='service', full_name='skywalking.v3.InstancePingPkg.service', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='serviceInstance', full_name='apm.v3.InstancePingPkg.serviceInstance', index=1,
+      name='serviceInstance', full_name='skywalking.v3.InstancePingPkg.serviceInstance', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -119,14 +119,14 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 InstanceProperties = _reflection.GeneratedProtocolMessageType('InstanceProperties', (_message.Message,), {
   'DESCRIPTOR' : _INSTANCEPROPERTIES,
   '__module__' : 'management.Management_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.InstanceProperties)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.InstanceProperties)
   })
 _sym_db.RegisterMessage(InstanceProperties)
 
 InstancePingPkg = _reflection.GeneratedProtocolMessageType('InstancePingPkg', (_message.Message,), {
   'DESCRIPTOR' : _INSTANCEPINGPKG,
   '__module__' : 'management.Management_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.InstancePingPkg)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.InstancePingPkg)
   })
 _sym_db.RegisterMessage(InstancePingPkg)
 
@@ -135,7 +135,7 @@ DESCRIPTOR._options = None
 
 _MANAGEMENTSERVICE = _descriptor.ServiceDescriptor(
   name='ManagementService',
-  full_name='apm.v3.ManagementService',
+  full_name='skywalking.v3.ManagementService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
@@ -145,7 +145,7 @@ _MANAGEMENTSERVICE = _descriptor.ServiceDescriptor(
   methods=[
   _descriptor.MethodDescriptor(
     name='reportInstanceProperties',
-    full_name='apm.v3.ManagementService.reportInstanceProperties',
+    full_name='skywalking.v3.ManagementService.reportInstanceProperties',
     index=0,
     containing_service=None,
     input_type=_INSTANCEPROPERTIES,
@@ -155,7 +155,7 @@ _MANAGEMENTSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='keepAlive',
-    full_name='apm.v3.ManagementService.keepAlive',
+    full_name='skywalking.v3.ManagementService.keepAlive',
     index=1,
     containing_service=None,
     input_type=_INSTANCEPINGPKG,

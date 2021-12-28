@@ -17,17 +17,17 @@ from ..common import Common_pb2 as common_dot_Common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='event/Event.proto',
-  package='apm.v3',
+  package='skywalking.v3',
   syntax='proto3',
-  serialized_options=b'\n*org.apache.apm.apm.network.event.v3P\001Z1skywalking.apache.org/repo/goapi/collect/event/v3\252\002\035SkyWalking.NetworkProtocol.V3',
+  serialized_options=b'\n*org.apache.skywalking.apm.network.event.v3P\001Z1skywalking.apache.org/repo/goapi/collect/event/v3\252\002\035SkyWalking.NetworkProtocol.V3',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11\x65vent/Event.proto\x12\rapm.v3\x1a\x13\x63ommon/Common.proto\"\x8f\x02\n\x05\x45vent\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12%\n\x06source\x18\x02 \x01(\x0b\x32\x15.apm.v3.Source\x12\x0c\n\x04name\x18\x03 \x01(\t\x12!\n\x04type\x18\x04 \x01(\x0e\x32\x13.apm.v3.Type\x12\x0f\n\x07message\x18\x05 \x01(\t\x12\x38\n\nparameters\x18\x06 \x03(\x0b\x32$.apm.v3.Event.ParametersEntry\x12\x11\n\tstartTime\x18\x07 \x01(\x03\x12\x0f\n\x07\x65ndTime\x18\x08 \x01(\x03\x1a\x31\n\x0fParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"D\n\x06Source\x12\x0f\n\x07service\x18\x01 \x01(\t\x12\x17\n\x0fserviceInstance\x18\x02 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x03 \x01(\t*\x1d\n\x04Type\x12\n\n\x06Normal\x10\x00\x12\t\n\x05\x45rror\x10\x01\x32L\n\x0c\x45ventService\x12<\n\x07\x63ollect\x12\x14.apm.v3.Event\x1a\x17.apm.v3.Commands\"\x00(\x01\x42\x81\x01\n*org.apache.apm.apm.network.event.v3P\x01Z1skywalking.apache.org/repo/goapi/collect/event/v3\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
+  serialized_pb=b'\n\x11\x65vent/Event.proto\x12\rskywalking.v3\x1a\x13\x63ommon/Common.proto\"\x8f\x02\n\x05\x45vent\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12%\n\x06source\x18\x02 \x01(\x0b\x32\x15.skywalking.v3.Source\x12\x0c\n\x04name\x18\x03 \x01(\t\x12!\n\x04type\x18\x04 \x01(\x0e\x32\x13.skywalking.v3.Type\x12\x0f\n\x07message\x18\x05 \x01(\t\x12\x38\n\nparameters\x18\x06 \x03(\x0b\x32$.skywalking.v3.Event.ParametersEntry\x12\x11\n\tstartTime\x18\x07 \x01(\x03\x12\x0f\n\x07\x65ndTime\x18\x08 \x01(\x03\x1a\x31\n\x0fParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"D\n\x06Source\x12\x0f\n\x07service\x18\x01 \x01(\t\x12\x17\n\x0fserviceInstance\x18\x02 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x03 \x01(\t*\x1d\n\x04Type\x12\n\n\x06Normal\x10\x00\x12\t\n\x05\x45rror\x10\x01\x32L\n\x0c\x45ventService\x12<\n\x07\x63ollect\x12\x14.skywalking.v3.Event\x1a\x17.skywalking.v3.Commands\"\x00(\x01\x42\x81\x01\n*org.apache.skywalking.apm.network.event.v3P\x01Z1skywalking.apache.org/repo/goapi/collect/event/v3\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
   ,
   dependencies=[common_dot_Common__pb2.DESCRIPTOR,])
 
 _TYPE = _descriptor.EnumDescriptor(
   name='Type',
-  full_name='apm.v3.Type',
+  full_name='skywalking.v3.Type',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -58,21 +58,21 @@ Error = 1
 
 _EVENT_PARAMETERSENTRY = _descriptor.Descriptor(
   name='ParametersEntry',
-  full_name='apm.v3.Event.ParametersEntry',
+  full_name='skywalking.v3.Event.ParametersEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='apm.v3.Event.ParametersEntry.key', index=0,
+      name='key', full_name='skywalking.v3.Event.ParametersEntry.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='value', full_name='apm.v3.Event.ParametersEntry.value', index=1,
+      name='value', full_name='skywalking.v3.Event.ParametersEntry.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -96,63 +96,63 @@ _EVENT_PARAMETERSENTRY = _descriptor.Descriptor(
 
 _EVENT = _descriptor.Descriptor(
   name='Event',
-  full_name='apm.v3.Event',
+  full_name='skywalking.v3.Event',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='uuid', full_name='apm.v3.Event.uuid', index=0,
+      name='uuid', full_name='skywalking.v3.Event.uuid', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='source', full_name='apm.v3.Event.source', index=1,
+      name='source', full_name='skywalking.v3.Event.source', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='name', full_name='apm.v3.Event.name', index=2,
+      name='name', full_name='skywalking.v3.Event.name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='type', full_name='apm.v3.Event.type', index=3,
+      name='type', full_name='skywalking.v3.Event.type', index=3,
       number=4, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='message', full_name='apm.v3.Event.message', index=4,
+      name='message', full_name='skywalking.v3.Event.message', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='parameters', full_name='apm.v3.Event.parameters', index=5,
+      name='parameters', full_name='skywalking.v3.Event.parameters', index=5,
       number=6, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='startTime', full_name='apm.v3.Event.startTime', index=6,
+      name='startTime', full_name='skywalking.v3.Event.startTime', index=6,
       number=7, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='endTime', full_name='apm.v3.Event.endTime', index=7,
+      name='endTime', full_name='skywalking.v3.Event.endTime', index=7,
       number=8, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -177,28 +177,28 @@ _EVENT = _descriptor.Descriptor(
 
 _SOURCE = _descriptor.Descriptor(
   name='Source',
-  full_name='apm.v3.Source',
+  full_name='skywalking.v3.Source',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='service', full_name='apm.v3.Source.service', index=0,
+      name='service', full_name='skywalking.v3.Source.service', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='serviceInstance', full_name='apm.v3.Source.serviceInstance', index=1,
+      name='serviceInstance', full_name='skywalking.v3.Source.serviceInstance', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='endpoint', full_name='apm.v3.Source.endpoint', index=2,
+      name='endpoint', full_name='skywalking.v3.Source.endpoint', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -234,12 +234,12 @@ Event = _reflection.GeneratedProtocolMessageType('Event', (_message.Message,), {
   'ParametersEntry' : _reflection.GeneratedProtocolMessageType('ParametersEntry', (_message.Message,), {
     'DESCRIPTOR' : _EVENT_PARAMETERSENTRY,
     '__module__' : 'event.Event_pb2'
-    # @@protoc_insertion_point(class_scope:apm.v3.Event.ParametersEntry)
+    # @@protoc_insertion_point(class_scope:skywalking.v3.Event.ParametersEntry)
     })
   ,
   'DESCRIPTOR' : _EVENT,
   '__module__' : 'event.Event_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.Event)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.Event)
   })
 _sym_db.RegisterMessage(Event)
 _sym_db.RegisterMessage(Event.ParametersEntry)
@@ -247,7 +247,7 @@ _sym_db.RegisterMessage(Event.ParametersEntry)
 Source = _reflection.GeneratedProtocolMessageType('Source', (_message.Message,), {
   'DESCRIPTOR' : _SOURCE,
   '__module__' : 'event.Event_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.Source)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.Source)
   })
 _sym_db.RegisterMessage(Source)
 
@@ -257,7 +257,7 @@ _EVENT_PARAMETERSENTRY._options = None
 
 _EVENTSERVICE = _descriptor.ServiceDescriptor(
   name='EventService',
-  full_name='apm.v3.EventService',
+  full_name='skywalking.v3.EventService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
@@ -267,7 +267,7 @@ _EVENTSERVICE = _descriptor.ServiceDescriptor(
   methods=[
   _descriptor.MethodDescriptor(
     name='collect',
-    full_name='apm.v3.EventService.collect',
+    full_name='skywalking.v3.EventService.collect',
     index=0,
     containing_service=None,
     input_type=_EVENT,

@@ -19,9 +19,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='browser/BrowserPerfCompat.proto',
   package='',
   syntax='proto3',
-  serialized_options=b'\n:org.apache.apm.apm.network.language.agent.v3.compatP\001Z:apm.apache.org/repo/goapi/collect/language/agent/v3\270\001\001\252\002\035SkyWalking.NetworkProtocol.V3',
+  serialized_options=b'\n:org.apache.skywalking.apm.network.language.agent.v3.compatP\001Z:skywalking.apache.org/repo/goapi/collect/language/agent/v3\270\001\001\252\002\035SkyWalking.NetworkProtocol.V3',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1f\x62rowser/BrowserPerfCompat.proto\x1a\x13\x63ommon/Common.proto\x1a\x19\x62rowser/BrowserPerf.proto2\xb3\x01\n\x12\x42rowserPerfService\x12L\n\x0f\x63ollectPerfData\x12\x1e.apm.v3.BrowserPerfData\x1a\x17.apm.v3.Commands\"\x00\x12O\n\x10\x63ollectErrorLogs\x12\x1e.apm.v3.BrowserErrorLog\x1a\x17.apm.v3.Commands\"\x00(\x01\x42\x9d\x01\n:org.apache.apm.apm.network.language.agent.v3.compatP\x01Z:apm.apache.org/repo/goapi/collect/language/agent/v3\xb8\x01\x01\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
+  serialized_pb=b'\n\x1f\x62rowser/BrowserPerfCompat.proto\x1a\x13\x63ommon/Common.proto\x1a\x19\x62rowser/BrowserPerf.proto2\xb3\x01\n\x12\x42rowserPerfService\x12L\n\x0f\x63ollectPerfData\x12\x1e.skywalking.v3.BrowserPerfData\x1a\x17.skywalking.v3.Commands\"\x00\x12O\n\x10\x63ollectErrorLogs\x12\x1e.skywalking.v3.BrowserErrorLog\x1a\x17.skywalking.v3.Commands\"\x00(\x01\x42\x9d\x01\n:org.apache.skywalking.apm.network.language.agent.v3.compatP\x01Z:skywalking.apache.org/repo/goapi/collect/language/agent/v3\xb8\x01\x01\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
   ,
   dependencies=[common_dot_Common__pb2.DESCRIPTOR,browser_dot_BrowserPerf__pb2.DESCRIPTOR,])
 

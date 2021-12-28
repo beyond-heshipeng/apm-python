@@ -17,17 +17,17 @@ from ..common import Common_pb2 as common_dot_Common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='language-agent/Tracing.proto',
-  package='apm.v3',
+  package='skywalking.v3',
   syntax='proto3',
-  serialized_options=b'\n3org.apache.apm.apm.network.language.agent.v3P\001Z:apm.apache.org/repo/goapi/collect/language/agent/v3\252\002\035SkyWalking.NetworkProtocol.V3',
+  serialized_options=b'\n3org.apache.skywalking.apm.network.language.agent.v3P\001Z:skywalking.apache.org/repo/goapi/collect/language/agent/v3\252\002\035SkyWalking.NetworkProtocol.V3',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1clanguage-agent/Tracing.proto\x12\rapm.v3\x1a\x13\x63ommon/Common.proto\"\xa3\x01\n\rSegmentObject\x12\x0f\n\x07traceId\x18\x01 \x01(\t\x12\x16\n\x0etraceSegmentId\x18\x02 \x01(\t\x12(\n\x05spans\x18\x03 \x03(\x0b\x32\x19.apm.v3.SpanObject\x12\x0f\n\x07service\x18\x04 \x01(\t\x12\x17\n\x0fserviceInstance\x18\x05 \x01(\t\x12\x15\n\risSizeLimited\x18\x06 \x01(\x08\"\xf0\x01\n\x10SegmentReference\x12\'\n\x07refType\x18\x01 \x01(\x0e\x32\x16.apm.v3.RefType\x12\x0f\n\x07traceId\x18\x02 \x01(\t\x12\x1c\n\x14parentTraceSegmentId\x18\x03 \x01(\t\x12\x14\n\x0cparentSpanId\x18\x04 \x01(\x05\x12\x15\n\rparentService\x18\x05 \x01(\t\x12\x1d\n\x15parentServiceInstance\x18\x06 \x01(\t\x12\x16\n\x0eparentEndpoint\x18\x07 \x01(\t\x12 \n\x18networkAddressUsedAtPeer\x18\x08 \x01(\t\"\x91\x03\n\nSpanObject\x12\x0e\n\x06spanId\x18\x01 \x01(\x05\x12\x14\n\x0cparentSpanId\x18\x02 \x01(\x05\x12\x11\n\tstartTime\x18\x03 \x01(\x03\x12\x0f\n\x07\x65ndTime\x18\x04 \x01(\x03\x12-\n\x04refs\x18\x05 \x03(\x0b\x32\x1f.apm.v3.SegmentReference\x12\x15\n\roperationName\x18\x06 \x01(\t\x12\x0c\n\x04peer\x18\x07 \x01(\t\x12)\n\x08spanType\x18\x08 \x01(\x0e\x32\x17.apm.v3.SpanType\x12+\n\tspanLayer\x18\t \x01(\x0e\x32\x18.apm.v3.SpanLayer\x12\x13\n\x0b\x63omponentId\x18\n \x01(\x05\x12\x0f\n\x07isError\x18\x0b \x01(\x08\x12/\n\x04tags\x18\x0c \x03(\x0b\x32!.apm.v3.KeyStringValuePair\x12 \n\x04logs\x18\r \x03(\x0b\x32\x12.apm.v3.Log\x12\x14\n\x0cskipAnalysis\x18\x0e \x01(\x08\"D\n\x03Log\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12/\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32!.apm.v3.KeyStringValuePair\"\x10\n\x02ID\x12\n\n\x02id\x18\x01 \x03(\t\"C\n\x11SegmentCollection\x12.\n\x08segments\x18\x01 \x03(\x0b\x32\x1c.apm.v3.SegmentObject**\n\x08SpanType\x12\t\n\x05\x45ntry\x10\x00\x12\x08\n\x04\x45xit\x10\x01\x12\t\n\x05Local\x10\x02*,\n\x07RefType\x12\x10\n\x0c\x43rossProcess\x10\x00\x12\x0f\n\x0b\x43rossThread\x10\x01*U\n\tSpanLayer\x12\x0b\n\x07Unknown\x10\x00\x12\x0c\n\x08\x44\x61tabase\x10\x01\x12\x10\n\x0cRPCFramework\x10\x02\x12\x08\n\x04Http\x10\x03\x12\x06\n\x02MQ\x10\x04\x12\t\n\x05\x43\x61\x63he\x10\x05\x32\xaf\x01\n\x19TraceSegmentReportService\x12\x44\n\x07\x63ollect\x12\x1c.apm.v3.SegmentObject\x1a\x17.apm.v3.Commands\"\x00(\x01\x12L\n\rcollectInSync\x12 .apm.v3.SegmentCollection\x1a\x17.apm.v3.Commands\"\x00\x42\x93\x01\n3org.apache.apm.apm.network.language.agent.v3P\x01Z:apm.apache.org/repo/goapi/collect/language/agent/v3\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
+  serialized_pb=b'\n\x1clanguage-agent/Tracing.proto\x12\rskywalking.v3\x1a\x13\x63ommon/Common.proto\"\xa3\x01\n\rSegmentObject\x12\x0f\n\x07traceId\x18\x01 \x01(\t\x12\x16\n\x0etraceSegmentId\x18\x02 \x01(\t\x12(\n\x05spans\x18\x03 \x03(\x0b\x32\x19.skywalking.v3.SpanObject\x12\x0f\n\x07service\x18\x04 \x01(\t\x12\x17\n\x0fserviceInstance\x18\x05 \x01(\t\x12\x15\n\risSizeLimited\x18\x06 \x01(\x08\"\xf0\x01\n\x10SegmentReference\x12\'\n\x07refType\x18\x01 \x01(\x0e\x32\x16.skywalking.v3.RefType\x12\x0f\n\x07traceId\x18\x02 \x01(\t\x12\x1c\n\x14parentTraceSegmentId\x18\x03 \x01(\t\x12\x14\n\x0cparentSpanId\x18\x04 \x01(\x05\x12\x15\n\rparentService\x18\x05 \x01(\t\x12\x1d\n\x15parentServiceInstance\x18\x06 \x01(\t\x12\x16\n\x0eparentEndpoint\x18\x07 \x01(\t\x12 \n\x18networkAddressUsedAtPeer\x18\x08 \x01(\t\"\x91\x03\n\nSpanObject\x12\x0e\n\x06spanId\x18\x01 \x01(\x05\x12\x14\n\x0cparentSpanId\x18\x02 \x01(\x05\x12\x11\n\tstartTime\x18\x03 \x01(\x03\x12\x0f\n\x07\x65ndTime\x18\x04 \x01(\x03\x12-\n\x04refs\x18\x05 \x03(\x0b\x32\x1f.skywalking.v3.SegmentReference\x12\x15\n\roperationName\x18\x06 \x01(\t\x12\x0c\n\x04peer\x18\x07 \x01(\t\x12)\n\x08spanType\x18\x08 \x01(\x0e\x32\x17.skywalking.v3.SpanType\x12+\n\tspanLayer\x18\t \x01(\x0e\x32\x18.skywalking.v3.SpanLayer\x12\x13\n\x0b\x63omponentId\x18\n \x01(\x05\x12\x0f\n\x07isError\x18\x0b \x01(\x08\x12/\n\x04tags\x18\x0c \x03(\x0b\x32!.skywalking.v3.KeyStringValuePair\x12 \n\x04logs\x18\r \x03(\x0b\x32\x12.skywalking.v3.Log\x12\x14\n\x0cskipAnalysis\x18\x0e \x01(\x08\"D\n\x03Log\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12/\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32!.skywalking.v3.KeyStringValuePair\"\x10\n\x02ID\x12\n\n\x02id\x18\x01 \x03(\t\"C\n\x11SegmentCollection\x12.\n\x08segments\x18\x01 \x03(\x0b\x32\x1c.skywalking.v3.SegmentObject**\n\x08SpanType\x12\t\n\x05\x45ntry\x10\x00\x12\x08\n\x04\x45xit\x10\x01\x12\t\n\x05Local\x10\x02*,\n\x07RefType\x12\x10\n\x0c\x43rossProcess\x10\x00\x12\x0f\n\x0b\x43rossThread\x10\x01*U\n\tSpanLayer\x12\x0b\n\x07Unknown\x10\x00\x12\x0c\n\x08\x44\x61tabase\x10\x01\x12\x10\n\x0cRPCFramework\x10\x02\x12\x08\n\x04Http\x10\x03\x12\x06\n\x02MQ\x10\x04\x12\t\n\x05\x43\x61\x63he\x10\x05\x32\xaf\x01\n\x19TraceSegmentReportService\x12\x44\n\x07\x63ollect\x12\x1c.skywalking.v3.SegmentObject\x1a\x17.skywalking.v3.Commands\"\x00(\x01\x12L\n\rcollectInSync\x12 .skywalking.v3.SegmentCollection\x1a\x17.skywalking.v3.Commands\"\x00\x42\x93\x01\n3org.apache.skywalking.apm.network.language.agent.v3P\x01Z:skywalking.apache.org/repo/goapi/collect/language/agent/v3\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
   ,
   dependencies=[common_dot_Common__pb2.DESCRIPTOR,])
 
 _SPANTYPE = _descriptor.EnumDescriptor(
   name='SpanType',
-  full_name='apm.v3.SpanType',
+  full_name='skywalking.v3.SpanType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -58,7 +58,7 @@ _sym_db.RegisterEnumDescriptor(_SPANTYPE)
 SpanType = enum_type_wrapper.EnumTypeWrapper(_SPANTYPE)
 _REFTYPE = _descriptor.EnumDescriptor(
   name='RefType',
-  full_name='apm.v3.RefType',
+  full_name='skywalking.v3.RefType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -84,7 +84,7 @@ _sym_db.RegisterEnumDescriptor(_REFTYPE)
 RefType = enum_type_wrapper.EnumTypeWrapper(_REFTYPE)
 _SPANLAYER = _descriptor.EnumDescriptor(
   name='SpanLayer',
-  full_name='apm.v3.SpanLayer',
+  full_name='skywalking.v3.SpanLayer',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -144,49 +144,49 @@ Cache = 5
 
 _SEGMENTOBJECT = _descriptor.Descriptor(
   name='SegmentObject',
-  full_name='apm.v3.SegmentObject',
+  full_name='skywalking.v3.SegmentObject',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='traceId', full_name='apm.v3.SegmentObject.traceId', index=0,
+      name='traceId', full_name='skywalking.v3.SegmentObject.traceId', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='traceSegmentId', full_name='apm.v3.SegmentObject.traceSegmentId', index=1,
+      name='traceSegmentId', full_name='skywalking.v3.SegmentObject.traceSegmentId', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='spans', full_name='apm.v3.SegmentObject.spans', index=2,
+      name='spans', full_name='skywalking.v3.SegmentObject.spans', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='service', full_name='apm.v3.SegmentObject.service', index=3,
+      name='service', full_name='skywalking.v3.SegmentObject.service', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='serviceInstance', full_name='apm.v3.SegmentObject.serviceInstance', index=4,
+      name='serviceInstance', full_name='skywalking.v3.SegmentObject.serviceInstance', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='isSizeLimited', full_name='apm.v3.SegmentObject.isSizeLimited', index=5,
+      name='isSizeLimited', full_name='skywalking.v3.SegmentObject.isSizeLimited', index=5,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -211,63 +211,63 @@ _SEGMENTOBJECT = _descriptor.Descriptor(
 
 _SEGMENTREFERENCE = _descriptor.Descriptor(
   name='SegmentReference',
-  full_name='apm.v3.SegmentReference',
+  full_name='skywalking.v3.SegmentReference',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='refType', full_name='apm.v3.SegmentReference.refType', index=0,
+      name='refType', full_name='skywalking.v3.SegmentReference.refType', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='traceId', full_name='apm.v3.SegmentReference.traceId', index=1,
+      name='traceId', full_name='skywalking.v3.SegmentReference.traceId', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='parentTraceSegmentId', full_name='apm.v3.SegmentReference.parentTraceSegmentId', index=2,
+      name='parentTraceSegmentId', full_name='skywalking.v3.SegmentReference.parentTraceSegmentId', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='parentSpanId', full_name='apm.v3.SegmentReference.parentSpanId', index=3,
+      name='parentSpanId', full_name='skywalking.v3.SegmentReference.parentSpanId', index=3,
       number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='parentService', full_name='apm.v3.SegmentReference.parentService', index=4,
+      name='parentService', full_name='skywalking.v3.SegmentReference.parentService', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='parentServiceInstance', full_name='apm.v3.SegmentReference.parentServiceInstance', index=5,
+      name='parentServiceInstance', full_name='skywalking.v3.SegmentReference.parentServiceInstance', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='parentEndpoint', full_name='apm.v3.SegmentReference.parentEndpoint', index=6,
+      name='parentEndpoint', full_name='skywalking.v3.SegmentReference.parentEndpoint', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='networkAddressUsedAtPeer', full_name='apm.v3.SegmentReference.networkAddressUsedAtPeer', index=7,
+      name='networkAddressUsedAtPeer', full_name='skywalking.v3.SegmentReference.networkAddressUsedAtPeer', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -292,105 +292,105 @@ _SEGMENTREFERENCE = _descriptor.Descriptor(
 
 _SPANOBJECT = _descriptor.Descriptor(
   name='SpanObject',
-  full_name='apm.v3.SpanObject',
+  full_name='skywalking.v3.SpanObject',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='spanId', full_name='apm.v3.SpanObject.spanId', index=0,
+      name='spanId', full_name='skywalking.v3.SpanObject.spanId', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='parentSpanId', full_name='apm.v3.SpanObject.parentSpanId', index=1,
+      name='parentSpanId', full_name='skywalking.v3.SpanObject.parentSpanId', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='startTime', full_name='apm.v3.SpanObject.startTime', index=2,
+      name='startTime', full_name='skywalking.v3.SpanObject.startTime', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='endTime', full_name='apm.v3.SpanObject.endTime', index=3,
+      name='endTime', full_name='skywalking.v3.SpanObject.endTime', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='refs', full_name='apm.v3.SpanObject.refs', index=4,
+      name='refs', full_name='skywalking.v3.SpanObject.refs', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='operationName', full_name='apm.v3.SpanObject.operationName', index=5,
+      name='operationName', full_name='skywalking.v3.SpanObject.operationName', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='peer', full_name='apm.v3.SpanObject.peer', index=6,
+      name='peer', full_name='skywalking.v3.SpanObject.peer', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='spanType', full_name='apm.v3.SpanObject.spanType', index=7,
+      name='spanType', full_name='skywalking.v3.SpanObject.spanType', index=7,
       number=8, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='spanLayer', full_name='apm.v3.SpanObject.spanLayer', index=8,
+      name='spanLayer', full_name='skywalking.v3.SpanObject.spanLayer', index=8,
       number=9, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='componentId', full_name='apm.v3.SpanObject.componentId', index=9,
+      name='componentId', full_name='skywalking.v3.SpanObject.componentId', index=9,
       number=10, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='isError', full_name='apm.v3.SpanObject.isError', index=10,
+      name='isError', full_name='skywalking.v3.SpanObject.isError', index=10,
       number=11, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='apm.v3.SpanObject.tags', index=11,
+      name='tags', full_name='skywalking.v3.SpanObject.tags', index=11,
       number=12, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='logs', full_name='apm.v3.SpanObject.logs', index=12,
+      name='logs', full_name='skywalking.v3.SpanObject.logs', index=12,
       number=13, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='skipAnalysis', full_name='apm.v3.SpanObject.skipAnalysis', index=13,
+      name='skipAnalysis', full_name='skywalking.v3.SpanObject.skipAnalysis', index=13,
       number=14, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -415,21 +415,21 @@ _SPANOBJECT = _descriptor.Descriptor(
 
 _LOG = _descriptor.Descriptor(
   name='Log',
-  full_name='apm.v3.Log',
+  full_name='skywalking.v3.Log',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='time', full_name='apm.v3.Log.time', index=0,
+      name='time', full_name='skywalking.v3.Log.time', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='data', full_name='apm.v3.Log.data', index=1,
+      name='data', full_name='skywalking.v3.Log.data', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -454,14 +454,14 @@ _LOG = _descriptor.Descriptor(
 
 _ID = _descriptor.Descriptor(
   name='ID',
-  full_name='apm.v3.ID',
+  full_name='skywalking.v3.ID',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='apm.v3.ID.id', index=0,
+      name='id', full_name='skywalking.v3.ID.id', index=0,
       number=1, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -486,14 +486,14 @@ _ID = _descriptor.Descriptor(
 
 _SEGMENTCOLLECTION = _descriptor.Descriptor(
   name='SegmentCollection',
-  full_name='apm.v3.SegmentCollection',
+  full_name='skywalking.v3.SegmentCollection',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='segments', full_name='apm.v3.SegmentCollection.segments', index=0,
+      name='segments', full_name='skywalking.v3.SegmentCollection.segments', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -538,42 +538,42 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 SegmentObject = _reflection.GeneratedProtocolMessageType('SegmentObject', (_message.Message,), {
   'DESCRIPTOR' : _SEGMENTOBJECT,
   '__module__' : 'language_agent.Tracing_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.SegmentObject)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.SegmentObject)
   })
 _sym_db.RegisterMessage(SegmentObject)
 
 SegmentReference = _reflection.GeneratedProtocolMessageType('SegmentReference', (_message.Message,), {
   'DESCRIPTOR' : _SEGMENTREFERENCE,
   '__module__' : 'language_agent.Tracing_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.SegmentReference)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.SegmentReference)
   })
 _sym_db.RegisterMessage(SegmentReference)
 
 SpanObject = _reflection.GeneratedProtocolMessageType('SpanObject', (_message.Message,), {
   'DESCRIPTOR' : _SPANOBJECT,
   '__module__' : 'language_agent.Tracing_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.SpanObject)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.SpanObject)
   })
 _sym_db.RegisterMessage(SpanObject)
 
 Log = _reflection.GeneratedProtocolMessageType('Log', (_message.Message,), {
   'DESCRIPTOR' : _LOG,
   '__module__' : 'language_agent.Tracing_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.Log)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.Log)
   })
 _sym_db.RegisterMessage(Log)
 
 ID = _reflection.GeneratedProtocolMessageType('ID', (_message.Message,), {
   'DESCRIPTOR' : _ID,
   '__module__' : 'language_agent.Tracing_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.ID)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.ID)
   })
 _sym_db.RegisterMessage(ID)
 
 SegmentCollection = _reflection.GeneratedProtocolMessageType('SegmentCollection', (_message.Message,), {
   'DESCRIPTOR' : _SEGMENTCOLLECTION,
   '__module__' : 'language_agent.Tracing_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.SegmentCollection)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.SegmentCollection)
   })
 _sym_db.RegisterMessage(SegmentCollection)
 
@@ -582,7 +582,7 @@ DESCRIPTOR._options = None
 
 _TRACESEGMENTREPORTSERVICE = _descriptor.ServiceDescriptor(
   name='TraceSegmentReportService',
-  full_name='apm.v3.TraceSegmentReportService',
+  full_name='skywalking.v3.TraceSegmentReportService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
@@ -592,7 +592,7 @@ _TRACESEGMENTREPORTSERVICE = _descriptor.ServiceDescriptor(
   methods=[
   _descriptor.MethodDescriptor(
     name='collect',
-    full_name='apm.v3.TraceSegmentReportService.collect',
+    full_name='skywalking.v3.TraceSegmentReportService.collect',
     index=0,
     containing_service=None,
     input_type=_SEGMENTOBJECT,
@@ -602,7 +602,7 @@ _TRACESEGMENTREPORTSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='collectInSync',
-    full_name='apm.v3.TraceSegmentReportService.collectInSync',
+    full_name='skywalking.v3.TraceSegmentReportService.collectInSync',
     index=1,
     containing_service=None,
     input_type=_SEGMENTCOLLECTION,

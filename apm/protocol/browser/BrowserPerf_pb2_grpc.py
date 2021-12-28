@@ -17,12 +17,12 @@ class BrowserPerfServiceStub(object):
             channel: A grpc.Channel.
         """
         self.collectPerfData = channel.unary_unary(
-                '/apm.v3.BrowserPerfService/collectPerfData',
+                '/skywalking.v3.BrowserPerfService/collectPerfData',
                 request_serializer=browser_dot_BrowserPerf__pb2.BrowserPerfData.SerializeToString,
                 response_deserializer=common_dot_Common__pb2.Commands.FromString,
                 )
         self.collectErrorLogs = channel.stream_unary(
-                '/apm.v3.BrowserPerfService/collectErrorLogs',
+                '/skywalking.v3.BrowserPerfService/collectErrorLogs',
                 request_serializer=browser_dot_BrowserPerf__pb2.BrowserErrorLog.SerializeToString,
                 response_deserializer=common_dot_Common__pb2.Commands.FromString,
                 )
@@ -61,7 +61,7 @@ def add_BrowserPerfServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'apm.v3.BrowserPerfService', rpc_method_handlers)
+            'skywalking.v3.BrowserPerfService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -81,7 +81,7 @@ class BrowserPerfService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/apm.v3.BrowserPerfService/collectPerfData',
+        return grpc.experimental.unary_unary(request, target, '/skywalking.v3.BrowserPerfService/collectPerfData',
             browser_dot_BrowserPerf__pb2.BrowserPerfData.SerializeToString,
             common_dot_Common__pb2.Commands.FromString,
             options, channel_credentials,
@@ -98,7 +98,7 @@ class BrowserPerfService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.stream_unary(request_iterator, target, '/apm.v3.BrowserPerfService/collectErrorLogs',
+        return grpc.experimental.stream_unary(request_iterator, target, '/skywalking.v3.BrowserPerfService/collectErrorLogs',
             browser_dot_BrowserPerf__pb2.BrowserErrorLog.SerializeToString,
             common_dot_Common__pb2.Commands.FromString,
             options, channel_credentials,

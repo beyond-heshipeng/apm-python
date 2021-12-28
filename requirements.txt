@@ -1,1 +1,9 @@
-packaging
+apache-apm==0.7.0
+grpcio==1.43.0
+grpcio-tools==1.43.0
+kafka-python==2.0.2
+packaging==21.3
+protobuf==3.19.1
+pyparsing==3.0.6
+six==1.16.0
+wrapt==1.13.3

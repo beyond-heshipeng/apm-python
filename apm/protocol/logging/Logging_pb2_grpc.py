@@ -17,7 +17,7 @@ class LogReportServiceStub(object):
             channel: A grpc.Channel.
         """
         self.collect = channel.stream_unary(
-                '/apm.v3.LogReportService/collect',
+                '/skywalking.v3.LogReportService/collect',
                 request_serializer=logging_dot_Logging__pb2.LogData.SerializeToString,
                 response_deserializer=common_dot_Common__pb2.Commands.FromString,
                 )
@@ -46,7 +46,7 @@ def add_LogReportServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'apm.v3.LogReportService', rpc_method_handlers)
+            'skywalking.v3.LogReportService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -66,7 +66,7 @@ class LogReportService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.stream_unary(request_iterator, target, '/apm.v3.LogReportService/collect',
+        return grpc.experimental.stream_unary(request_iterator, target, '/skywalking.v3.LogReportService/collect',
             logging_dot_Logging__pb2.LogData.SerializeToString,
             common_dot_Common__pb2.Commands.FromString,
             options, channel_credentials,

@@ -16,17 +16,17 @@ class ProfileTaskStub(object):
             channel: A grpc.Channel.
         """
         self.getProfileTaskCommands = channel.unary_unary(
-                '/apm.v3.ProfileTask/getProfileTaskCommands',
+                '/skywalking.v3.ProfileTask/getProfileTaskCommands',
                 request_serializer=profile_dot_Profile__pb2.ProfileTaskCommandQuery.SerializeToString,
                 response_deserializer=common_dot_Common__pb2.Commands.FromString,
                 )
         self.collectSnapshot = channel.stream_unary(
-                '/apm.v3.ProfileTask/collectSnapshot',
+                '/skywalking.v3.ProfileTask/collectSnapshot',
                 request_serializer=profile_dot_Profile__pb2.ThreadSnapshot.SerializeToString,
                 response_deserializer=common_dot_Common__pb2.Commands.FromString,
                 )
         self.reportTaskFinish = channel.unary_unary(
-                '/apm.v3.ProfileTask/reportTaskFinish',
+                '/skywalking.v3.ProfileTask/reportTaskFinish',
                 request_serializer=profile_dot_Profile__pb2.ProfileTaskFinishReport.SerializeToString,
                 response_deserializer=common_dot_Common__pb2.Commands.FromString,
                 )
@@ -76,7 +76,7 @@ def add_ProfileTaskServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'apm.v3.ProfileTask', rpc_method_handlers)
+            'skywalking.v3.ProfileTask', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -95,7 +95,7 @@ class ProfileTask(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/apm.v3.ProfileTask/getProfileTaskCommands',
+        return grpc.experimental.unary_unary(request, target, '/skywalking.v3.ProfileTask/getProfileTaskCommands',
             profile_dot_Profile__pb2.ProfileTaskCommandQuery.SerializeToString,
             common_dot_Common__pb2.Commands.FromString,
             options, channel_credentials,
@@ -112,7 +112,7 @@ class ProfileTask(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.stream_unary(request_iterator, target, '/apm.v3.ProfileTask/collectSnapshot',
+        return grpc.experimental.stream_unary(request_iterator, target, '/skywalking.v3.ProfileTask/collectSnapshot',
             profile_dot_Profile__pb2.ThreadSnapshot.SerializeToString,
             common_dot_Common__pb2.Commands.FromString,
             options, channel_credentials,
@@ -129,7 +129,7 @@ class ProfileTask(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/apm.v3.ProfileTask/reportTaskFinish',
+        return grpc.experimental.unary_unary(request, target, '/skywalking.v3.ProfileTask/reportTaskFinish',
             profile_dot_Profile__pb2.ProfileTaskFinishReport.SerializeToString,
             common_dot_Common__pb2.Commands.FromString,
             options, channel_credentials,

@@ -17,17 +17,17 @@ from ..common import Common_pb2 as common_dot_Common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='language-agent/JVMMetric.proto',
-  package='apm.v3',
+  package='skywalking.v3',
   syntax='proto3',
-  serialized_options=b'\n3org.apache.apm.apm.network.language.agent.v3P\001Z:apm.apache.org/repo/goapi/collect/language/agent/v3\252\002\035SkyWalking.NetworkProtocol.V3',
+  serialized_options=b'\n3org.apache.skywalking.apm.network.language.agent.v3P\001Z:skywalking.apache.org/repo/goapi/collect/language/agent/v3\252\002\035SkyWalking.NetworkProtocol.V3',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1elanguage-agent/JVMMetric.proto\x12\rapm.v3\x1a\x13\x63ommon/Common.proto\"j\n\x13JVMMetricCollection\x12)\n\x07metrics\x18\x01 \x03(\x0b\x32\x18.apm.v3.JVMMetric\x12\x0f\n\x07service\x18\x02 \x01(\t\x12\x17\n\x0fserviceInstance\x18\x03 \x01(\t\"\xfb\x01\n\tJVMMetric\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x1f\n\x03\x63pu\x18\x02 \x01(\x0b\x32\x12.apm.v3.CPU\x12%\n\x06memory\x18\x03 \x03(\x0b\x32\x15.apm.v3.Memory\x12-\n\nmemoryPool\x18\x04 \x03(\x0b\x32\x19.apm.v3.MemoryPool\x12\x1d\n\x02gc\x18\x05 \x03(\x0b\x32\x11.apm.v3.GC\x12%\n\x06thread\x18\x06 \x01(\x0b\x32\x15.apm.v3.Thread\x12#\n\x05\x63lazz\x18\x07 \x01(\x0b\x32\x14.apm.v3.Class\"T\n\x06Memory\x12\x0e\n\x06isHeap\x18\x01 \x01(\x08\x12\x0c\n\x04init\x18\x02 \x01(\x03\x12\x0b\n\x03max\x18\x03 \x01(\x03\x12\x0c\n\x04used\x18\x04 \x01(\x03\x12\x11\n\tcommitted\x18\x05 \x01(\x03\"o\n\nMemoryPool\x12%\n\x04type\x18\x01 \x01(\x0e\x32\x17.apm.v3.PoolType\x12\x0c\n\x04init\x18\x02 \x01(\x03\x12\x0b\n\x03max\x18\x03 \x01(\x03\x12\x0c\n\x04used\x18\x04 \x01(\x03\x12\x11\n\tcommitted\x18\x05 \x01(\x03\"J\n\x02GC\x12\'\n\x06phrase\x18\x01 \x01(\x0e\x32\x17.apm.v3.GCPhrase\x12\r\n\x05\x63ount\x18\x02 \x01(\x03\x12\x0c\n\x04time\x18\x03 \x01(\x03\"\xcd\x01\n\x06Thread\x12\x11\n\tliveCount\x18\x01 \x01(\x03\x12\x13\n\x0b\x64\x61\x65monCount\x18\x02 \x01(\x03\x12\x11\n\tpeakCount\x18\x03 \x01(\x03\x12 \n\x18runnableStateThreadCount\x18\x04 \x01(\x03\x12\x1f\n\x17\x62lockedStateThreadCount\x18\x05 \x01(\x03\x12\x1f\n\x17waitingStateThreadCount\x18\x06 \x01(\x03\x12$\n\x1ctimedWaitingStateThreadCount\x18\x07 \x01(\x03\"a\n\x05\x43lass\x12\x18\n\x10loadedClassCount\x18\x01 \x01(\x03\x12\x1f\n\x17totalUnloadedClassCount\x18\x02 \x01(\x03\x12\x1d\n\x15totalLoadedClassCount\x18\x03 \x01(\x03*\x80\x01\n\x08PoolType\x12\x14\n\x10\x43ODE_CACHE_USAGE\x10\x00\x12\x10\n\x0cNEWGEN_USAGE\x10\x01\x12\x10\n\x0cOLDGEN_USAGE\x10\x02\x12\x12\n\x0eSURVIVOR_USAGE\x10\x03\x12\x11\n\rPERMGEN_USAGE\x10\x04\x12\x13\n\x0fMETASPACE_USAGE\x10\x05*\x1c\n\x08GCPhrase\x12\x07\n\x03NEW\x10\x00\x12\x07\n\x03OLD\x10\x01\x32\x62\n\x16JVMMetricReportService\x12H\n\x07\x63ollect\x12\".apm.v3.JVMMetricCollection\x1a\x17.apm.v3.Commands\"\x00\x42\x93\x01\n3org.apache.apm.apm.network.language.agent.v3P\x01Z:apm.apache.org/repo/goapi/collect/language/agent/v3\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
+  serialized_pb=b'\n\x1elanguage-agent/JVMMetric.proto\x12\rskywalking.v3\x1a\x13\x63ommon/Common.proto\"j\n\x13JVMMetricCollection\x12)\n\x07metrics\x18\x01 \x03(\x0b\x32\x18.skywalking.v3.JVMMetric\x12\x0f\n\x07service\x18\x02 \x01(\t\x12\x17\n\x0fserviceInstance\x18\x03 \x01(\t\"\xfb\x01\n\tJVMMetric\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x1f\n\x03\x63pu\x18\x02 \x01(\x0b\x32\x12.skywalking.v3.CPU\x12%\n\x06memory\x18\x03 \x03(\x0b\x32\x15.skywalking.v3.Memory\x12-\n\nmemoryPool\x18\x04 \x03(\x0b\x32\x19.skywalking.v3.MemoryPool\x12\x1d\n\x02gc\x18\x05 \x03(\x0b\x32\x11.skywalking.v3.GC\x12%\n\x06thread\x18\x06 \x01(\x0b\x32\x15.skywalking.v3.Thread\x12#\n\x05\x63lazz\x18\x07 \x01(\x0b\x32\x14.skywalking.v3.Class\"T\n\x06Memory\x12\x0e\n\x06isHeap\x18\x01 \x01(\x08\x12\x0c\n\x04init\x18\x02 \x01(\x03\x12\x0b\n\x03max\x18\x03 \x01(\x03\x12\x0c\n\x04used\x18\x04 \x01(\x03\x12\x11\n\tcommitted\x18\x05 \x01(\x03\"o\n\nMemoryPool\x12%\n\x04type\x18\x01 \x01(\x0e\x32\x17.skywalking.v3.PoolType\x12\x0c\n\x04init\x18\x02 \x01(\x03\x12\x0b\n\x03max\x18\x03 \x01(\x03\x12\x0c\n\x04used\x18\x04 \x01(\x03\x12\x11\n\tcommitted\x18\x05 \x01(\x03\"J\n\x02GC\x12\'\n\x06phrase\x18\x01 \x01(\x0e\x32\x17.skywalking.v3.GCPhrase\x12\r\n\x05\x63ount\x18\x02 \x01(\x03\x12\x0c\n\x04time\x18\x03 \x01(\x03\"\xcd\x01\n\x06Thread\x12\x11\n\tliveCount\x18\x01 \x01(\x03\x12\x13\n\x0b\x64\x61\x65monCount\x18\x02 \x01(\x03\x12\x11\n\tpeakCount\x18\x03 \x01(\x03\x12 \n\x18runnableStateThreadCount\x18\x04 \x01(\x03\x12\x1f\n\x17\x62lockedStateThreadCount\x18\x05 \x01(\x03\x12\x1f\n\x17waitingStateThreadCount\x18\x06 \x01(\x03\x12$\n\x1ctimedWaitingStateThreadCount\x18\x07 \x01(\x03\"a\n\x05\x43lass\x12\x18\n\x10loadedClassCount\x18\x01 \x01(\x03\x12\x1f\n\x17totalUnloadedClassCount\x18\x02 \x01(\x03\x12\x1d\n\x15totalLoadedClassCount\x18\x03 \x01(\x03*\x80\x01\n\x08PoolType\x12\x14\n\x10\x43ODE_CACHE_USAGE\x10\x00\x12\x10\n\x0cNEWGEN_USAGE\x10\x01\x12\x10\n\x0cOLDGEN_USAGE\x10\x02\x12\x12\n\x0eSURVIVOR_USAGE\x10\x03\x12\x11\n\rPERMGEN_USAGE\x10\x04\x12\x13\n\x0fMETASPACE_USAGE\x10\x05*\x1c\n\x08GCPhrase\x12\x07\n\x03NEW\x10\x00\x12\x07\n\x03OLD\x10\x01\x32\x62\n\x16JVMMetricReportService\x12H\n\x07\x63ollect\x12\".skywalking.v3.JVMMetricCollection\x1a\x17.skywalking.v3.Commands\"\x00\x42\x93\x01\n3org.apache.skywalking.apm.network.language.agent.v3P\x01Z:skywalking.apache.org/repo/goapi/collect/language/agent/v3\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
   ,
   dependencies=[common_dot_Common__pb2.DESCRIPTOR,])
 
 _POOLTYPE = _descriptor.EnumDescriptor(
   name='PoolType',
-  full_name='apm.v3.PoolType',
+  full_name='skywalking.v3.PoolType',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -73,7 +73,7 @@ _sym_db.RegisterEnumDescriptor(_POOLTYPE)
 PoolType = enum_type_wrapper.EnumTypeWrapper(_POOLTYPE)
 _GCPHRASE = _descriptor.EnumDescriptor(
   name='GCPhrase',
-  full_name='apm.v3.GCPhrase',
+  full_name='skywalking.v3.GCPhrase',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -110,28 +110,28 @@ OLD = 1
 
 _JVMMETRICCOLLECTION = _descriptor.Descriptor(
   name='JVMMetricCollection',
-  full_name='apm.v3.JVMMetricCollection',
+  full_name='skywalking.v3.JVMMetricCollection',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='metrics', full_name='apm.v3.JVMMetricCollection.metrics', index=0,
+      name='metrics', full_name='skywalking.v3.JVMMetricCollection.metrics', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='service', full_name='apm.v3.JVMMetricCollection.service', index=1,
+      name='service', full_name='skywalking.v3.JVMMetricCollection.service', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='serviceInstance', full_name='apm.v3.JVMMetricCollection.serviceInstance', index=2,
+      name='serviceInstance', full_name='skywalking.v3.JVMMetricCollection.serviceInstance', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -156,56 +156,56 @@ _JVMMETRICCOLLECTION = _descriptor.Descriptor(
 
 _JVMMETRIC = _descriptor.Descriptor(
   name='JVMMetric',
-  full_name='apm.v3.JVMMetric',
+  full_name='skywalking.v3.JVMMetric',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='time', full_name='apm.v3.JVMMetric.time', index=0,
+      name='time', full_name='skywalking.v3.JVMMetric.time', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='cpu', full_name='apm.v3.JVMMetric.cpu', index=1,
+      name='cpu', full_name='skywalking.v3.JVMMetric.cpu', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='memory', full_name='apm.v3.JVMMetric.memory', index=2,
+      name='memory', full_name='skywalking.v3.JVMMetric.memory', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='memoryPool', full_name='apm.v3.JVMMetric.memoryPool', index=3,
+      name='memoryPool', full_name='skywalking.v3.JVMMetric.memoryPool', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='gc', full_name='apm.v3.JVMMetric.gc', index=4,
+      name='gc', full_name='skywalking.v3.JVMMetric.gc', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='thread', full_name='apm.v3.JVMMetric.thread', index=5,
+      name='thread', full_name='skywalking.v3.JVMMetric.thread', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='clazz', full_name='apm.v3.JVMMetric.clazz', index=6,
+      name='clazz', full_name='skywalking.v3.JVMMetric.clazz', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -230,42 +230,42 @@ _JVMMETRIC = _descriptor.Descriptor(
 
 _MEMORY = _descriptor.Descriptor(
   name='Memory',
-  full_name='apm.v3.Memory',
+  full_name='skywalking.v3.Memory',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='isHeap', full_name='apm.v3.Memory.isHeap', index=0,
+      name='isHeap', full_name='skywalking.v3.Memory.isHeap', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='init', full_name='apm.v3.Memory.init', index=1,
+      name='init', full_name='skywalking.v3.Memory.init', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='max', full_name='apm.v3.Memory.max', index=2,
+      name='max', full_name='skywalking.v3.Memory.max', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='used', full_name='apm.v3.Memory.used', index=3,
+      name='used', full_name='skywalking.v3.Memory.used', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='committed', full_name='apm.v3.Memory.committed', index=4,
+      name='committed', full_name='skywalking.v3.Memory.committed', index=4,
       number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -290,42 +290,42 @@ _MEMORY = _descriptor.Descriptor(
 
 _MEMORYPOOL = _descriptor.Descriptor(
   name='MemoryPool',
-  full_name='apm.v3.MemoryPool',
+  full_name='skywalking.v3.MemoryPool',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='type', full_name='apm.v3.MemoryPool.type', index=0,
+      name='type', full_name='skywalking.v3.MemoryPool.type', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='init', full_name='apm.v3.MemoryPool.init', index=1,
+      name='init', full_name='skywalking.v3.MemoryPool.init', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='max', full_name='apm.v3.MemoryPool.max', index=2,
+      name='max', full_name='skywalking.v3.MemoryPool.max', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='used', full_name='apm.v3.MemoryPool.used', index=3,
+      name='used', full_name='skywalking.v3.MemoryPool.used', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='committed', full_name='apm.v3.MemoryPool.committed', index=4,
+      name='committed', full_name='skywalking.v3.MemoryPool.committed', index=4,
       number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -350,28 +350,28 @@ _MEMORYPOOL = _descriptor.Descriptor(
 
 _GC = _descriptor.Descriptor(
   name='GC',
-  full_name='apm.v3.GC',
+  full_name='skywalking.v3.GC',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='phrase', full_name='apm.v3.GC.phrase', index=0,
+      name='phrase', full_name='skywalking.v3.GC.phrase', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='count', full_name='apm.v3.GC.count', index=1,
+      name='count', full_name='skywalking.v3.GC.count', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='time', full_name='apm.v3.GC.time', index=2,
+      name='time', full_name='skywalking.v3.GC.time', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -396,56 +396,56 @@ _GC = _descriptor.Descriptor(
 
 _THREAD = _descriptor.Descriptor(
   name='Thread',
-  full_name='apm.v3.Thread',
+  full_name='skywalking.v3.Thread',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='liveCount', full_name='apm.v3.Thread.liveCount', index=0,
+      name='liveCount', full_name='skywalking.v3.Thread.liveCount', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='daemonCount', full_name='apm.v3.Thread.daemonCount', index=1,
+      name='daemonCount', full_name='skywalking.v3.Thread.daemonCount', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='peakCount', full_name='apm.v3.Thread.peakCount', index=2,
+      name='peakCount', full_name='skywalking.v3.Thread.peakCount', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='runnableStateThreadCount', full_name='apm.v3.Thread.runnableStateThreadCount', index=3,
+      name='runnableStateThreadCount', full_name='skywalking.v3.Thread.runnableStateThreadCount', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='blockedStateThreadCount', full_name='apm.v3.Thread.blockedStateThreadCount', index=4,
+      name='blockedStateThreadCount', full_name='skywalking.v3.Thread.blockedStateThreadCount', index=4,
       number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='waitingStateThreadCount', full_name='apm.v3.Thread.waitingStateThreadCount', index=5,
+      name='waitingStateThreadCount', full_name='skywalking.v3.Thread.waitingStateThreadCount', index=5,
       number=6, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='timedWaitingStateThreadCount', full_name='apm.v3.Thread.timedWaitingStateThreadCount', index=6,
+      name='timedWaitingStateThreadCount', full_name='skywalking.v3.Thread.timedWaitingStateThreadCount', index=6,
       number=7, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -470,28 +470,28 @@ _THREAD = _descriptor.Descriptor(
 
 _CLASS = _descriptor.Descriptor(
   name='Class',
-  full_name='apm.v3.Class',
+  full_name='skywalking.v3.Class',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='loadedClassCount', full_name='apm.v3.Class.loadedClassCount', index=0,
+      name='loadedClassCount', full_name='skywalking.v3.Class.loadedClassCount', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='totalUnloadedClassCount', full_name='apm.v3.Class.totalUnloadedClassCount', index=1,
+      name='totalUnloadedClassCount', full_name='skywalking.v3.Class.totalUnloadedClassCount', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='totalLoadedClassCount', full_name='apm.v3.Class.totalLoadedClassCount', index=2,
+      name='totalLoadedClassCount', full_name='skywalking.v3.Class.totalLoadedClassCount', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -536,49 +536,49 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 JVMMetricCollection = _reflection.GeneratedProtocolMessageType('JVMMetricCollection', (_message.Message,), {
   'DESCRIPTOR' : _JVMMETRICCOLLECTION,
   '__module__' : 'language_agent.JVMMetric_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.JVMMetricCollection)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.JVMMetricCollection)
   })
 _sym_db.RegisterMessage(JVMMetricCollection)
 
 JVMMetric = _reflection.GeneratedProtocolMessageType('JVMMetric', (_message.Message,), {
   'DESCRIPTOR' : _JVMMETRIC,
   '__module__' : 'language_agent.JVMMetric_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.JVMMetric)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.JVMMetric)
   })
 _sym_db.RegisterMessage(JVMMetric)
 
 Memory = _reflection.GeneratedProtocolMessageType('Memory', (_message.Message,), {
   'DESCRIPTOR' : _MEMORY,
   '__module__' : 'language_agent.JVMMetric_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.Memory)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.Memory)
   })
 _sym_db.RegisterMessage(Memory)
 
 MemoryPool = _reflection.GeneratedProtocolMessageType('MemoryPool', (_message.Message,), {
   'DESCRIPTOR' : _MEMORYPOOL,
   '__module__' : 'language_agent.JVMMetric_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.MemoryPool)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.MemoryPool)
   })
 _sym_db.RegisterMessage(MemoryPool)
 
 GC = _reflection.GeneratedProtocolMessageType('GC', (_message.Message,), {
   'DESCRIPTOR' : _GC,
   '__module__' : 'language_agent.JVMMetric_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.GC)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.GC)
   })
 _sym_db.RegisterMessage(GC)
 
 Thread = _reflection.GeneratedProtocolMessageType('Thread', (_message.Message,), {
   'DESCRIPTOR' : _THREAD,
   '__module__' : 'language_agent.JVMMetric_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.Thread)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.Thread)
   })
 _sym_db.RegisterMessage(Thread)
 
 Class = _reflection.GeneratedProtocolMessageType('Class', (_message.Message,), {
   'DESCRIPTOR' : _CLASS,
   '__module__' : 'language_agent.JVMMetric_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.Class)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.Class)
   })
 _sym_db.RegisterMessage(Class)
 
@@ -587,7 +587,7 @@ DESCRIPTOR._options = None
 
 _JVMMETRICREPORTSERVICE = _descriptor.ServiceDescriptor(
   name='JVMMetricReportService',
-  full_name='apm.v3.JVMMetricReportService',
+  full_name='skywalking.v3.JVMMetricReportService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
@@ -597,7 +597,7 @@ _JVMMETRICREPORTSERVICE = _descriptor.ServiceDescriptor(
   methods=[
   _descriptor.MethodDescriptor(
     name='collect',
-    full_name='apm.v3.JVMMetricReportService.collect',
+    full_name='skywalking.v3.JVMMetricReportService.collect',
     index=0,
     containing_service=None,
     input_type=_JVMMETRICCOLLECTION,

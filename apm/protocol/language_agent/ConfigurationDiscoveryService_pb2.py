@@ -16,11 +16,11 @@ from ..common import Common_pb2 as common_dot_Common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='language-agent/ConfigurationDiscoveryService.proto',
-  package='apm.v3',
+  package='skywalking.v3',
   syntax='proto3',
-  serialized_options=b'\n3org.apache.apm.apm.network.language.agent.v3P\001Z?apm.apache.org/repo/goapi/collect/agent/configuration/v3\252\002\035SkyWalking.NetworkProtocol.V3',
+  serialized_options=b'\n3org.apache.skywalking.apm.network.language.agent.v3P\001Z?skywalking.apache.org/repo/goapi/collect/agent/configuration/v3\252\002\035SkyWalking.NetworkProtocol.V3',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n2language-agent/ConfigurationDiscoveryService.proto\x12\rapm.v3\x1a\x13\x63ommon/Common.proto\"9\n\x18\x43onfigurationSyncRequest\x12\x0f\n\x07service\x18\x01 \x01(\t\x12\x0c\n\x04uuid\x18\x02 \x01(\t2z\n\x1d\x43onfigurationDiscoveryService\x12Y\n\x13\x66\x65tchConfigurations\x12\'.apm.v3.ConfigurationSyncRequest\x1a\x17.apm.v3.Commands\"\x00\x42\x98\x01\n3org.apache.apm.apm.network.language.agent.v3P\x01Z?apm.apache.org/repo/goapi/collect/agent/configuration/v3\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
+  serialized_pb=b'\n2language-agent/ConfigurationDiscoveryService.proto\x12\rskywalking.v3\x1a\x13\x63ommon/Common.proto\"9\n\x18\x43onfigurationSyncRequest\x12\x0f\n\x07service\x18\x01 \x01(\t\x12\x0c\n\x04uuid\x18\x02 \x01(\t2z\n\x1d\x43onfigurationDiscoveryService\x12Y\n\x13\x66\x65tchConfigurations\x12\'.skywalking.v3.ConfigurationSyncRequest\x1a\x17.skywalking.v3.Commands\"\x00\x42\x98\x01\n3org.apache.skywalking.apm.network.language.agent.v3P\x01Z?skywalking.apache.org/repo/goapi/collect/agent/configuration/v3\xaa\x02\x1dSkyWalking.NetworkProtocol.V3b\x06proto3'
   ,
   dependencies=[common_dot_Common__pb2.DESCRIPTOR,])
 
@@ -29,21 +29,21 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _CONFIGURATIONSYNCREQUEST = _descriptor.Descriptor(
   name='ConfigurationSyncRequest',
-  full_name='apm.v3.ConfigurationSyncRequest',
+  full_name='skywalking.v3.ConfigurationSyncRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='service', full_name='apm.v3.ConfigurationSyncRequest.service', index=0,
+      name='service', full_name='skywalking.v3.ConfigurationSyncRequest.service', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='uuid', full_name='apm.v3.ConfigurationSyncRequest.uuid', index=1,
+      name='uuid', full_name='skywalking.v3.ConfigurationSyncRequest.uuid', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -71,7 +71,7 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 ConfigurationSyncRequest = _reflection.GeneratedProtocolMessageType('ConfigurationSyncRequest', (_message.Message,), {
   'DESCRIPTOR' : _CONFIGURATIONSYNCREQUEST,
   '__module__' : 'language_agent.ConfigurationDiscoveryService_pb2'
-  # @@protoc_insertion_point(class_scope:apm.v3.ConfigurationSyncRequest)
+  # @@protoc_insertion_point(class_scope:skywalking.v3.ConfigurationSyncRequest)
   })
 _sym_db.RegisterMessage(ConfigurationSyncRequest)
 
@@ -80,7 +80,7 @@ DESCRIPTOR._options = None
 
 _CONFIGURATIONDISCOVERYSERVICE = _descriptor.ServiceDescriptor(
   name='ConfigurationDiscoveryService',
-  full_name='apm.v3.ConfigurationDiscoveryService',
+  full_name='skywalking.v3.ConfigurationDiscoveryService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
@@ -90,7 +90,7 @@ _CONFIGURATIONDISCOVERYSERVICE = _descriptor.ServiceDescriptor(
   methods=[
   _descriptor.MethodDescriptor(
     name='fetchConfigurations',
-    full_name='apm.v3.ConfigurationDiscoveryService.fetchConfigurations',
+    full_name='skywalking.v3.ConfigurationDiscoveryService.fetchConfigurations',
     index=0,
     containing_service=None,
     input_type=_CONFIGURATIONSYNCREQUEST,

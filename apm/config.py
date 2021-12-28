@@ -30,12 +30,14 @@ RE_HTTP_IGNORE_METHOD = RE_IGNORE_PATH  # type: re.Pattern
 options = None  # here to include 'options' in globals
 options = globals().copy()  # THIS MUST PRECEDE DIRECTLY BEFORE LIST OF CONFIG OPTIONS!
 
+env = os.getenv("ENV") or "DEV"
+
 service_name = os.getenv('SW_AGENT_NAME') or 'Python Service Name'  # type: str
 service_instance = os.getenv('SW_AGENT_INSTANCE') or str(uuid.uuid1()).replace('-', '')  # type: str
 agent_namespace = os.getenv('SW_AGENT_NAMESPACE')  # type: str
-collector_address = os.getenv('SW_AGENT_COLLECTOR_BACKEND_SERVICES') or '127.0.0.1:11800'  # type: str
+collector_address = os.getenv('APM.COLLECTOR.BACKEND_REST_SERVICE') or '127.0.0.1:11800'  # type: str
 force_tls = os.getenv('SW_AGENT_FORCE_TLS', '').lower() == 'true'  # type: bool
-protocol = (os.getenv('SW_AGENT_PROTOCOL') or 'grpc').lower()  # type: str
+protocol = (os.getenv('SW_AGENT_PROTOCOL') or 'kafka').lower()  # type: str
 authentication = os.getenv('SW_AGENT_AUTHENTICATION')  # type: str
 logging_level = os.getenv('SW_AGENT_LOGGING_LEVEL') or 'INFO'  # type: str
 disable_plugins = (os.getenv('SW_AGENT_DISABLE_PLUGINS') or '').split(',')  # type: List[str]
@@ -59,10 +61,11 @@ correlation_value_max_length = int(os.getenv('SW_CORRELATION_VALUE_MAX_LENGTH') 
 trace_ignore_path = os.getenv('SW_TRACE_IGNORE_PATH') or ''  # type: str
 elasticsearch_trace_dsl = True if os.getenv('SW_ELASTICSEARCH_TRACE_DSL') and \
                                   os.getenv('SW_ELASTICSEARCH_TRACE_DSL') == 'True' else False  # type: bool
-kafka_bootstrap_servers = os.getenv('SW_KAFKA_REPORTER_BOOTSTRAP_SERVERS') or 'localhost:9092'  # type: str
-kafka_topic_management = os.getenv('SW_KAFKA_REPORTER_TOPIC_MANAGEMENT') or 'apm-managements'  # type: str
-kafka_topic_segment = os.getenv('SW_KAFKA_REPORTER_TOPIC_SEGMENT') or 'apm-segments'  # type: str
-kafka_topic_log = os.getenv('SW_KAFKA_REPORTER_TOPIC_LOG') or 'apm-logs'  # type: str
+kafka_bootstrap_servers = os.getenv('APM_COLLECTOR_KAFKA_BOOTSERVERS') or 'localhost:9092'  # type: str
+kafka_topic_management = os.getenv('SW_KAFKA_REPORTER_TOPIC_MANAGEMENT') or f'apm-managements-{env}'  # type: str
+kafka_topic_segment = os.getenv('SW_KAFKA_REPORTER_TOPIC_SEGMENT') or f'apm-segments-{env}'  # type: str
+kafka_topic_log = os.getenv('SW_KAFKA_REPORTER_TOPIC_LOG') or f'apm-log-{env}'  # type: str
+kafka_topic_metric = os.getenv("SW_KAFKA_REPORTER_TOPIC_METRIC") or f'apm-metrics-{env}'  # type: str
 celery_parameters_length = int(os.getenv('SW_CELERY_PARAMETERS_LENGTH') or '512')
 
 # profile configs

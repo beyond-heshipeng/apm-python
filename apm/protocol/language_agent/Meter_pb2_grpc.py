@@ -16,8 +16,13 @@ class MeterReportServiceStub(object):
             channel: A grpc.Channel.
         """
         self.collect = channel.stream_unary(
-                '/apm.v3.MeterReportService/collect',
+                '/skywalking.v3.MeterReportService/collect',
                 request_serializer=language__agent_dot_Meter__pb2.MeterData.SerializeToString,
+                response_deserializer=common_dot_Common__pb2.Commands.FromString,
+                )
+        self.collectBatch = channel.stream_unary(
+                '/skywalking.v3.MeterReportService/collectBatch',
+                request_serializer=language__agent_dot_Meter__pb2.MeterDataCollection.SerializeToString,
                 response_deserializer=common_dot_Common__pb2.Commands.FromString,
                 )
 
@@ -27,6 +32,16 @@ class MeterReportServiceServicer(object):
 
     def collect(self, request_iterator, context):
         """Meter data is reported in a certain period. The agent/SDK should report all collected metrics in this period through one stream.
+        The whole stream is an input data set, client should onComplete the stream per report period.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def collectBatch(self, request_iterator, context):
+        """Reporting meter data in bulk mode as MeterDataCollection.
+        By using this, each one in the stream would be treated as a complete input for MAL engine,
+        comparing to `collect (stream MeterData)`, which is using one stream as an input data set.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -40,9 +55,14 @@ def add_MeterReportServiceServicer_to_server(servicer, server):
                     request_deserializer=language__agent_dot_Meter__pb2.MeterData.FromString,
                     response_serializer=common_dot_Common__pb2.Commands.SerializeToString,
             ),
+            'collectBatch': grpc.stream_unary_rpc_method_handler(
+                    servicer.collectBatch,
+                    request_deserializer=language__agent_dot_Meter__pb2.MeterDataCollection.FromString,
+                    response_serializer=common_dot_Common__pb2.Commands.SerializeToString,
+            ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'apm.v3.MeterReportService', rpc_method_handlers)
+            'skywalking.v3.MeterReportService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -61,8 +81,25 @@ class MeterReportService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.stream_unary(request_iterator, target, '/apm.v3.MeterReportService/collect',
+        return grpc.experimental.stream_unary(request_iterator, target, '/skywalking.v3.MeterReportService/collect',
             language__agent_dot_Meter__pb2.MeterData.SerializeToString,
+            common_dot_Common__pb2.Commands.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def collectBatch(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_unary(request_iterator, target, '/skywalking.v3.MeterReportService/collectBatch',
+            language__agent_dot_Meter__pb2.MeterDataCollection.SerializeToString,
             common_dot_Common__pb2.Commands.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

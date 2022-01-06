@@ -40,3 +40,8 @@ class ProfileTaskChannelService(object):
 
     def send(self, generator):
         raise NotImplementedError()
+
+
+class MetricReportService(object):
+    def report(self, metric_data):
+        raise NotImplementedError()

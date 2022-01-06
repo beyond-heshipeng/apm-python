@@ -17,6 +17,7 @@
 
 from abc import ABC
 from queue import Queue
+from apm.trace.metric import Metric
 
 
 class Protocol(ABC):
@@ -36,6 +37,9 @@ class Protocol(ABC):
         raise NotImplementedError()
 
     def report_log(self, queue: Queue, block: bool = True):
+        raise NotImplementedError()
+
+    def report_metric(self):
         raise NotImplementedError()
 
     def query_profile_commands(self):

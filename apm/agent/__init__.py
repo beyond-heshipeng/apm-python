@@ -38,7 +38,7 @@ if TYPE_CHECKING:
 __started = False
 __protocol = Protocol()  # type: Protocol
 __heartbeat_thread = __report_thread = __log_report_thread = __query_profile_thread = __command_dispatch_thread \
-    = __send_profile_thread = __queue = __log_queue = __snapshot_queue = __finished = None
+    = __send_profile_thread = __queue = __log_queue = __metric_queue = __snapshot_queue = __finished = None
 
 
 def __heartbeat():
@@ -75,6 +75,19 @@ def __report_log():
     while not __finished.is_set():
         try:
             __protocol.report_log(__log_queue)
+            wait = base
+        except Exception as exc:
+            logger.error(str(exc))
+            wait = min(60, wait * 2 or 1)
+
+        __finished.wait(wait)
+
+
+def __report_metric():
+    wait = base = 2
+    while not __finished.is_set():
+        try:
+            __protocol.report_metric()
             wait = base
         except Exception as exc:
             logger.error(str(exc))
@@ -124,10 +137,12 @@ def __init_threading():
     __finished = Event()
     __heartbeat_thread = Thread(name='HeartbeatThread', target=__heartbeat, daemon=True)
     __report_thread = Thread(name='ReportThread', target=__report, daemon=True)
+    __report_metric_thread = Thread(name="ReportMetricThread", target=__report_metric, daemon=True)
     __command_dispatch_thread = Thread(name='CommandDispatchThread', target=__command_dispatch, daemon=True)
 
     __heartbeat_thread.start()
     __report_thread.start()
+    __report_metric_thread.start()
     __command_dispatch_thread.start()
 
     if config.log_reporter_active:

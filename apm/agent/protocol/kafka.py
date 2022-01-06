@@ -21,11 +21,13 @@ from time import time
 
 from apm import config
 from apm.agent import Protocol
-from apm.client.kafka import KafkaServiceManagementClient, KafkaTraceSegmentReportService, \
-    KafkaLogDataReportService
+from apm.client.kafka import (KafkaServiceManagementClient, KafkaTraceSegmentReportService, KafkaLogDataReportService,
+                              KafkaMetricReportService)
 from apm.loggings import logger, getLogger, logger_debug_enabled
 from apm.protocol.common.Common_pb2 import KeyStringValuePair
+from apm.trace.metric import Metric
 from apm.protocol.language_agent.Tracing_pb2 import SegmentObject, SpanObject, Log, SegmentReference
+
 from apm.protocol.logging.Logging_pb2 import LogData
 from apm.trace.segment import Segment
 
@@ -39,6 +41,7 @@ class KafkaProtocol(Protocol):
         self.service_management = KafkaServiceManagementClient()
         self.traces_reporter = KafkaTraceSegmentReportService()
         self.log_reporter = KafkaLogDataReportService()
+        self.metric_reporter = KafkaMetricReportService()
 
     def heartbeat(self):
         self.service_management.send_heart_beat()
@@ -133,3 +136,19 @@ class KafkaProtocol(Protocol):
                 yield log_data
 
         self.log_reporter.report(generator=generator())
+
+    def report_metric(self):
+
+        metric = Metric()
+        # 计算进程运行时间
+        metric.get_created_time()
+        # 计算进程占用内存
+        metric.get_memory()
+        # 计算进程占用CPU
+        metric.get_cpu_usage()
+        # 计算进程的线情况
+        metric.get_thread()
+        # 计算io情况
+        metric.get_io()
+
+        self.metric_reporter.report(metric)

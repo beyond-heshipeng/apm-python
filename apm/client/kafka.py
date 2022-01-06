@@ -17,14 +17,17 @@
 
 import ast
 import os
+import time
 
 from kafka import KafkaProducer
 
 from apm import config
-from apm.client import ServiceManagementClient, TraceSegmentReportService, LogDataReportService
+from apm.client import ServiceManagementClient, TraceSegmentReportService, LogDataReportService, MetricReportService
 from apm.loggings import logger, logger_debug_enabled
-from apm.protocol.common.Common_pb2 import KeyStringValuePair
+from apm.protocol.common.Common_pb2 import KeyStringValuePair, CPU
+from apm.protocol.language_agent.Metric_pb2 import MetricCollection, PyMemory, PyThread, IO, Metric as _Metric
 from apm.protocol.management.Management_pb2 import InstancePingPkg, InstanceProperties
+from apm.trace.metric import Metric
 
 kafka_configs = {}
 
@@ -119,6 +122,42 @@ class KafkaLogDataReportService(LogDataReportService):
             key = bytes(log_data.traceContext.traceSegmentId, encoding='utf-8')
             value = bytes(log_data.SerializeToString())
             self.producer.send(topic=self.topic, key=key, value=value)
+
+
+class KafkaMetricReportService(MetricReportService):
+    def __init__(self):
+        self.producer = KafkaProducer(**kafka_configs)
+        self.topic = config.kafka_topic_metric
+
+    def report(self, metric_data: Metric):
+        metric = MetricCollection(
+            service=config.service_name,
+            serviceInstance=config.service_instance,
+            metrics=_Metric(
+                time=int(round(time.time() * 1000)),
+                created_time=int(round(metric_data.created_time) * 1000),
+                cpu=CPU(
+                    usagePercent=metric_data.cpu
+                ),
+                memory=PyMemory(
+                    usagePercent=metric_data.memory,
+                ),
+                thread=PyThread(
+                    liveCount=metric_data.thread.liveCount,
+                    daemonCount=metric_data.thread.daemonCount
+                ),
+                io=IO(
+                    readCount=metric_data.io.readCount,
+                    writeCount=metric_data.io.writeCount,
+                    readBytes=metric_data.io.readBytes,
+                    writeBytes=metric_data.io.writeBytes,
+                )
+            )
+        )
+
+        key = bytes(metric.serviceInstance, encoding='utf-8')
+        value = bytes(metric.SerializeToString())
+        self.producer.send(topic=self.topic, key=key, value=value)
 
 
 class KafkaConfigDuplicated(Exception):

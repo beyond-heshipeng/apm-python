@@ -155,6 +155,8 @@ class KafkaMetricReportService(MetricReportService):
             )
         )
 
+        print(metric)
+
         key = bytes(metric.serviceInstance, encoding='utf-8')
         value = bytes(metric.SerializeToString())
         self.producer.send(topic=self.topic, key=key, value=value)

@@ -4,7 +4,8 @@ from apm import agent
 
 
 def method1():
-    time.sleep(20)
+    while True:
+        pass
     return '1'
 
 
@@ -19,7 +20,7 @@ def method3():
 
 
 if __name__ == '__main__':
-    # agent.start()
+    agent.start()
 
     import socketserver
     from http.server import BaseHTTPRequestHandler
@@ -28,7 +29,6 @@ if __name__ == '__main__':
 
         def do_POST(self):
             method3()
-            time.sleep(0.5)
             self.send_response(200)
             self.send_header('Content-Type', 'application/json')
             self.end_headers()

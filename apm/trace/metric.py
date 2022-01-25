@@ -39,11 +39,11 @@ class Metric:
     def get_io(self):
         process = psutil.Process(self.pid)
         print(process.io_counters())
-        # io_counters = process.io_counters()
-        # self.io.readCount = io_counters["read_count"]
-        # self.io.writeCount = io_counters["write_count"]
-        # self.io.readBytes = io_counters["readBytes"]
-        # self.io.writeBytes = io_counters["writeBytes"]
+        io_counters = process.io_counters()
+        self.io = self.io._replace(readCount=io_counters[0])
+        self.io = self.io._replace(writeCount=io_counters[1])
+        self.io = self.io._replace(readBytes=io_counters[2])
+        self.io = self.io._replace(writeBytes=io_counters[3])
 
     def __repr__(self):
         return (f"create_time-[{self.created_time}], pid-[{self.pid}], cpu-[{self.cpu}],"
